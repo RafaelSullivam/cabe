@@ -1,0 +1,87 @@
+body {
+  background: #ffff;
+  padding: 0 24px;
+  margin: 0;
+  height: 100vh;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+body {
+  margin-top: 1.2cm;
+}
+
+@page {
+  margin-left: 0.6cm;
+  margin-right: 0.3cm;
+  margin-top: 0.1cm;
+  margin-bottom: 0.1cm;
+}
+
+header {
+  position: fixed;
+  top: 0cm;
+  left: 0cm;
+  right: 0cm;
+  height: 3cm;
+}
+
+ .tg-cabecalho td,
+    .tg-cabecalho th {
+        border-color: black;
+        border-style: solid;
+        border-width: 1px;
+        font-family: Arial, sans-serif;
+        font-size: 10px;
+        overflow: hidden;
+        padding: 1px 5px;
+        word-break: normal;
+    }
+    .tg-cabecalho th {
+        font-weight: normal;
+    }
+    
+ .tg-cabecalho .tg-cabecalho-0pky {
+        border-color: inherit;
+        text-align: left;
+        vertical-align: top;
+    }
+
+    /* Classe para a célula do logo - AUMENTADA */
+    .tg-cabecalho .cliente-logo {
+        font-size: 14px;
+        height: 150px;
+        vertical-align: middle;
+        padding: 10px 5px;
+    }
+
+    /* Classe para manter tamanho original dos outros clientes */
+    .tg-cabecalho .cliente-texto {
+        font-size: 10px;
+        height: 60px;
+        vertical-align: middle;
+    }
+
+    /* Classe para manter tamanho original do relatório */
+    .tg-cabecalho .relatorio-texto {
+        font-size: 10px;
+        height: 60px;
+        vertical-align: middle;
+    }
+
+    /* Mantém o tamanho do subtítulo do relatório */
+    .tg-cabecalho .relatorio-subtitulo {
+        font-size: 9px;
+    }
+
+    /* Controle específico da altura das linhas */
+    .tg-cabecalho tr:first-child {
+        height: 150px; /* Linha do logo AUMENTADA */
+    }
+
+    .tg-cabecalho tr:last-child {
+        height: 60px; /* Segunda linha mantém tamanho padrão */
+    }

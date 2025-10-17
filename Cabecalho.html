@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <table class="tg-cabecalho" style="width: 100%;margin-bottom: 13px;">
+      <thead>
+        <tr>
+          <th class="cliente-logo" colspan="1" rowspan="2">
+            CLIENTE: <br />
+            ' . ($logo ? '<img
+              style="margin-left: 30%"
+              src="data:image/png;base64,' . base64_encode($logo) . '"
+              width="60px"
+              height="40px"
+            />' : '
+            <div
+              style="width: 60px; height: 80px; background-color: #ccc;"
+            ></div>
+            ') . '
+          </th>
+        </tr>
+        <tr>
+          <th class="tg-cabecalho-0pky col-2 cliente-texto" colspan="1" rowspan="2">
+            CLIENTE: <br />
+            ' . $abntImageHtml . '
+          </th>
+
+          <th class="tg-cabecalho-0pky col-3 relatorio-texto" colspan="2">
+            RELATÓRIO ENSAIO:
+            <div class="relatorio-subtitulo" style="margin-left: 21%; margin-top: -6px">
+              DETERMINAÇÃO DO TEOR DE UMIDADE DO SOLO
+            </div>
+          </th>
+        </tr>
+      </thead>
+    </table>
+  </body>
+</html>
