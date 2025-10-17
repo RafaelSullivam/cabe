@@ -1,4 +1,5 @@
 import React from 'react'
+import './HeaderTableStyles.css'
 
 interface HeaderTableProps {
   logo?: string;
@@ -6,6 +7,8 @@ interface HeaderTableProps {
   clienteNome?: string;
   relatorioTitulo?: string;
   relatorioSubtitulo?: string;
+  codSample?: string;
+  numberSample?: string;
 }
 
 const HeaderTable: React.FC<HeaderTableProps> = ({ 
@@ -13,7 +16,9 @@ const HeaderTable: React.FC<HeaderTableProps> = ({
   abntImage,
   clienteNome = "CLIENTE",
   relatorioTitulo = "RELATÓRIO ENSAIO",
-  relatorioSubtitulo = "DETERMINAÇÃO DO TEOR DE UMIDADE DO SOLO"
+  relatorioSubtitulo = "DETERMINAÇÃO DO TEOR DE UMIDADE DO SOLO",
+  codSample = "",
+  numberSample = ""
 }) => {
   // Simula a lógica PHP do HTML original
   const logoElement = logo ? (
@@ -45,7 +50,22 @@ const HeaderTable: React.FC<HeaderTableProps> = ({
   ) : null
 
   return (
-    <table className="tg-cabecalho">
+  <>
+        
+    <main >
+      
+    <div className="header-table-model">
+    <header>
+      <div className="header-logo" style={{ display: 'inline-block', width: '539px', paddingTop: '20px' }}>
+        <img src="images/geocontrole.png" width="195px" />
+      </div>
+      <div className="header-amostra" style={{ width: '212px', backgroundColor: 'green', color: '#fff', display: 'inline-block', fontFamily: 'Arial, sans-serif', fontSize: '13px', padding: '2px', textAlign: 'center' }}>
+        AMOSTRA Nº: {codSample} / {numberSample}
+      </div>
+    </header>
+    
+  
+      <table className="tg-cabecalho">
       <thead>
         <tr>
           <th className="cliente-logo" colSpan={1} rowSpan={2}>
@@ -72,6 +92,10 @@ const HeaderTable: React.FC<HeaderTableProps> = ({
         </tr>
       </thead>
     </table>
+    </div>
+    </main>
+    
+   </>
   )
 }
 

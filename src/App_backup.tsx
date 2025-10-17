@@ -29,6 +29,21 @@ const App: React.FC = () => {
     
     return cleanup
   }, [toggleDarkMode])
+    console.log('🌓 Ctrl+D: Alternar modo escuro/claro')
+
+    // Cleanup quando o componente for desmontado
+    return cleanup
+  }, [toggleDarkMode])
+
+  const alternarExemplo = (): void => {
+    const novoIndice = (indiceExemplo + 1) % exemplosDados.length
+    setIndiceExemplo(novoIndice)
+    setDadosAtivos(exemplosDados[novoIndice])
+  }
+
+  const alternarVisualizacao = (): void => {
+    setTipoVisualizacao(prev => prev === 'header' ? 'watercontent' : 'header')
+  }
 
   return (
     <>

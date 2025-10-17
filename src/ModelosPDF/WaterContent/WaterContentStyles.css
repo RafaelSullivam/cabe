@@ -1,0 +1,236 @@
+/* WaterContent Model - Estilos CSS */
+
+/* Estilos gerais da página */
+.water-content-model body {
+  margin-top: 1.2cm;
+}
+
+.water-content-model {
+  font-family: Arial, sans-serif;
+}
+
+@page {
+  margin-left: 0.6cm;
+  margin-right: 0.3cm;
+  margin-top: 0.1cm;
+  margin-bottom: 0.1cm;
+}
+
+.water-content-model header {
+  position: fixed;
+  top: 0cm;
+  left: 0cm;
+  right: 0cm;
+  height: 3cm;
+}
+
+/* Estilos das tabelas principais */
+.water-content-model .tg {
+  border-spacing: 0;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.water-content-model .tg td {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 8px;
+  padding: 0px 0px;
+  word-break: normal;
+}
+
+.water-content-model .tg th {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  word-break: normal;
+  padding: 0 0 0 2px !important;
+}
+
+.water-content-model .tg .tg-0pky {
+  padding: 5px;
+  border-color: inherit;
+  text-align: left;
+}
+
+.water-content-model .tg-0pky p {
+  margin-top: 2px;
+  vertical-align: top;
+}
+
+.water-content-model .tg .tg-0pky .title {
+  font-size: 0.6rem;
+  font-weight: bold;
+  margin: 0 !important;
+}
+
+.water-content-model .tg .tg-0pky .response {
+  font-size: 10px;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Estilos do cabeçalho */
+.water-content-model .tg-cabecalho {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0px auto;
+  width: 100%;
+}
+
+.water-content-model .tg-cabecalho td,
+.water-content-model .tg-cabecalho th {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  overflow: hidden;
+  padding: 2px 5px;
+  word-break: normal;
+}
+
+.water-content-model .tg-cabecalho th {
+  font-weight: normal;
+}
+
+.water-content-model .tg-cabecalho .tg-cabecalho-ps66 {
+  font-size: 9px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.water-content-model .tg-cabecalho .tg-cabecalho-p1nr {
+  border-color: inherit;
+  font-size: 9px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.water-content-model .tg-cabecalho .tg-cabecalho-0pky {
+  border-color: inherit;
+  text-align: left;
+  vertical-align: top;
+}
+
+.water-content-model .tg-cabecalho .tg-cabecalho-0pky .title {
+  font-size: 12px;
+  text-align: center;
+  margin: 0 !important;
+}
+
+/* Estilos da tabela de cápsulas */
+.water-content-model .tg-tabela-de-capsula {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0px auto;
+}
+
+.water-content-model .hr-ass {
+  height: 1px;
+  width: 90px;
+  color: #000000ff;
+  border-top: 1px;
+  border-right: 1px;
+  border-left: 1px;
+}
+
+.water-content-model .tg-tabela-de-capsula td,
+.water-content-model .tg-tabela-de-capsula th {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+  padding: 5px 5px;
+  word-break: normal;
+}
+
+.water-content-model .tg-tabela-de-capsula-2 {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0px auto;
+  width: 100%;
+}
+
+.water-content-model .tg-tabela-de-capsula-2 td,
+.water-content-model .tg-tabela-de-capsula-2 th {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+  padding: 2px 5px;
+  word-break: normal;
+  height: 10px;
+}
+
+.water-content-model .tg-tabela-de-capsula .tg-tabela-de-capsula-0r18,
+.water-content-model .tg-tabela-de-capsula-2 .tg-tabela-de-capsula-0r18 {
+  border-color: inherit;
+  font-size: 14px;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+.water-content-model .tg-tabela-de-capsula .tg-tabela-de-capsula-0r10,
+.water-content-model .tg-tabela-de-capsula-2 .tg-tabela-de-capsula-0r10 {
+  border-color: inherit;
+  font-size: 14px;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  width: 42.2px !important;
+}
+
+/* Estilos adicionais */
+.water-content-model .checkbox {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.water-content-model .removeBorder {
+  border: none !important;
+}
+
+.water-content-model .cabecalho-resultado-font {
+  font-weight: bold;
+}
+
+.water-content-model .footer {
+  position: fixed;
+  left: 0;
+  bottom: 50px;
+  width: 100%;
+  background: #fff;
+  z-index: 100;
+}
+
+.water-content-model #imagem-sobrepostaComp {
+  position: absolute;
+  top: 260px;
+  left: 65px;
+}
+
+/* Estilos específicos para elementos de título */
+.water-content-model .title {
+  font-size: 0.6rem;
+  font-weight: bold;
+  margin: 0 !important;
+}
+
+/* Estilos para elementos de resposta */
+.water-content-model .response {
+  font-size: 10px;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}

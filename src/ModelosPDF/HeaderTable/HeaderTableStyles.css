@@ -1,0 +1,73 @@
+/* Estilos específicos para HeaderTable */
+.header-table-model .tg-cabecalho {
+  width: 100%;
+  margin-bottom: 13px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.header-table-model .tg-cabecalho td,
+.header-table-model .tg-cabecalho th {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  overflow: hidden;
+  padding: 5px;
+  word-break: normal;
+  vertical-align: middle;
+}
+
+.header-table-model .tg-cabecalho th {
+  font-weight: normal;
+}
+
+.header-table-model .tg-cabecalho .tg-cabecalho-0pky {
+  border-color: inherit;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* Classe para a célula do logo */
+.header-table-model .tg-cabecalho .cliente-logo {
+  font-size: 10px;
+  height: 80px;
+  vertical-align: middle;
+  width: 25%;
+}
+
+/* Classe para as células de cliente */
+.header-table-model .tg-cabecalho .cliente-texto {
+  font-size: 8px;
+  height: 40px;
+  vertical-align: middle;
+  width: 25%;
+}
+
+/* Classe para a célula do relatório */
+.header-table-model .tg-cabecalho .relatorio-texto {
+  font-size: 8px;
+  height: 40px;
+  vertical-align: middle;
+  width: 50%;
+}
+
+/* Subtítulo do relatório */
+.header-table-model .tg-cabecalho .relatorio-subtitulo {
+  font-size: 7px;
+  margin-left: 21%;
+  margin-top: -6px;
+}
+
+/* Container ABNT */
+.header-table-model .abnt-container {
+  margin-top: 5px;
+  font-size: 7px;
+  text-align: center;
+}
+
+.header-table-model .abnt-container img {
+  max-width: 50px;
+  margin-top: 2px;
+}

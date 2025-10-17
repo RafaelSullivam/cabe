@@ -54,67 +54,6 @@ body {
 }
 
 /* Configuração da tabela de cabeçalho */
-.tg-cabecalho {
-  width: 100%;
-  margin-bottom: 13px;
-  border-collapse: collapse;
-  table-layout: fixed;
-}
-
-.tg-cabecalho td,
-.tg-cabecalho th {
-  border-color: black;
-  border-style: solid;
-  border-width: 1px;
-  font-family: Arial, sans-serif;
-  font-size: 10px;
-  overflow: hidden;
-  padding: 5px;
-  word-break: normal;
-  vertical-align: middle;
-}
-
-.tg-cabecalho th {
-  font-weight: normal;
-}
-
-.tg-cabecalho .tg-cabecalho-0pky {
-  border-color: inherit;
-  text-align: left;
-  vertical-align: top;
-}
-
-/* Classe para a célula do logo */
-.tg-cabecalho .cliente-logo {
-  font-size: 10px;
-  height: 80px;
-  vertical-align: middle;
-  width: 25%;
-}
-
-/* Classe para as células de cliente */
-.tg-cabecalho .cliente-texto {
-  font-size: 8px;
-  height: 40px;
-  vertical-align: middle;
-  width: 25%;
-}
-
-/* Classe para a célula do relatório */
-.tg-cabecalho .relatorio-texto {
-  font-size: 8px;
-  height: 40px;
-  vertical-align: middle;
-  width: 50%;
-}
-
-/* Subtítulo do relatório */
-.tg-cabecalho .relatorio-subtitulo {
-  font-size: 7px;
-  margin-left: 21%;
-  margin-top: -6px;
-}
-
 /* Menu de Impressão */
 .print-menu {
   position: fixed;
