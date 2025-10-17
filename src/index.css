@@ -1,0 +1,220 @@
+/* Reset e configuração básica */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #e5e5e5; /* Fundo cinza para simular mesa */
+  padding: 20px;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Container da folha A4 */
+.a4-container {
+  width: 210mm;  /* Largura A4 */
+  min-height: 297mm; /* Altura A4 */
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20mm; /* Margem interna da folha */
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Configuração para impressão */
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  body {
+    background: white;
+    padding: 0;
+  }
+  
+  .a4-container {
+    width: 100%;
+    min-height: 100%;
+    box-shadow: none;
+    margin: 0;
+    padding: 20mm;
+  }
+}
+
+/* Configuração da tabela de cabeçalho */
+.tg-cabecalho {
+  width: 100%;
+  margin-bottom: 13px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.tg-cabecalho td,
+.tg-cabecalho th {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  overflow: hidden;
+  padding: 5px;
+  word-break: normal;
+  vertical-align: middle;
+}
+
+.tg-cabecalho th {
+  font-weight: normal;
+}
+
+.tg-cabecalho .tg-cabecalho-0pky {
+  border-color: inherit;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* Classe para a célula do logo */
+.tg-cabecalho .cliente-logo {
+  font-size: 10px;
+  height: 80px;
+  vertical-align: middle;
+  width: 25%;
+}
+
+/* Classe para as células de cliente */
+.tg-cabecalho .cliente-texto {
+  font-size: 8px;
+  height: 40px;
+  vertical-align: middle;
+  width: 25%;
+}
+
+/* Classe para a célula do relatório */
+.tg-cabecalho .relatorio-texto {
+  font-size: 8px;
+  height: 40px;
+  vertical-align: middle;
+  width: 50%;
+}
+
+/* Subtítulo do relatório */
+.tg-cabecalho .relatorio-subtitulo {
+  font-size: 7px;
+  margin-left: 21%;
+  margin-top: -6px;
+}
+
+/* Menu de Impressão */
+.print-menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 15px;
+  z-index: 1000;
+  border: 1px solid #ddd;
+}
+
+.print-menu h4 {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+.print-button {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.2s;
+  text-decoration: none;
+  text-align: center;
+}
+
+.print-button.primary {
+  background-color: #007cba;
+  color: white;
+}
+
+.print-button.primary:hover {
+  background-color: #005a87;
+}
+
+.print-button.secondary {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.print-button.secondary:hover {
+  background-color: #e0e0e0;
+}
+
+.print-button.success {
+  background-color: #28a745;
+  color: white;
+}
+
+.print-button.success:hover {
+  background-color: #1e7e34;
+}
+
+/* Esconder menu na impressão */
+@media print {
+  .print-menu {
+    display: none;
+  }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .print-menu {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 10px auto 20px auto;
+    width: 90%;
+    max-width: 300px;
+  }
+  
+  .a4-container {
+    width: 95%;
+    min-height: auto;
+    padding: 15px;
+  }
+}
+
+/* Animação suave para o menu */
+.print-menu {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

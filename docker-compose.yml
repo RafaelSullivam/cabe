@@ -1,12 +1,14 @@
 services:
-  web:
+  react-app:
     build: .
     ports:
-      - "8080:8080"
+      - "3000:3000"
     volumes:
-      - .:/usr/share/nginx/html
-      - /usr/share/nginx/html/node_modules
+      - .:/app
+      - /app/node_modules
     environment:
       - NODE_ENV=development
-    command: live-server --host=0.0.0.0 --port=8080 --no-browser --watch=.
+      - CHOKIDAR_USEPOLLING=true
+    stdin_open: true
+    tty: true
     restart: unless-stopped

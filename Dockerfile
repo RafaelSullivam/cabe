@@ -1,20 +1,20 @@
-# Use uma imagem base do nginx
-FROM nginx:alpine
+# Use uma imagem base do Node.js
+FROM node:18-alpine
 
-# Instalar Node.js e npm para usar o live-server
-RUN apk add --no-cache nodejs npm
+# Definir diretório de trabalho
+WORKDIR /app
 
-# Instalar live-server globalmente para hot reload
-RUN npm install -g live-server
+# Copiar package.json e package-lock.json (se existir)
+COPY package*.json ./
 
-# Criar diretório de trabalho
-WORKDIR /usr/share/nginx/html
+# Instalar dependências
+RUN npm install
 
-# Copiar arquivos do projeto
+# Copiar código fonte
 COPY . .
 
-# Expor porta 8080 para o live-server
-EXPOSE 8080
+# Expor porta 3000 para o Vite
+EXPOSE 3000
 
-# Comando para iniciar o live-server com hot reload
-CMD ["live-server", "--host=0.0.0.0", "--port=8080", "--no-browser"]
+# Comando para iniciar o servidor de desenvolvimento
+CMD ["npm", "run", "dev"]
