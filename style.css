@@ -50,38 +50,37 @@ header {
         vertical-align: top;
     }
 
-    /* Classe para a célula do logo - AUMENTADA */
+    /* Classe para a célula do logo - mantém altura original */
     .tg-cabecalho .cliente-logo {
-        font-size: 14px;
-        height: 150px;
+        font-size: 10px;
+        height: 80px;
         vertical-align: middle;
-        padding: 10px 5px;
     }
 
-    /* Classe para manter tamanho original dos outros clientes */
+    /* Classe para diminuir a altura dos outros clientes */
     .tg-cabecalho .cliente-texto {
-        font-size: 10px;
-        height: 60px;
+        font-size: 8px;
+        height: 40px;
         vertical-align: middle;
     }
 
-    /* Classe para manter tamanho original do relatório */
+    /* Classe para diminuir a altura do relatório */
     .tg-cabecalho .relatorio-texto {
-        font-size: 10px;
-        height: 60px;
+        font-size: 8px;
+        height: 40px;
         vertical-align: middle;
     }
 
     /* Mantém o tamanho do subtítulo do relatório */
     .tg-cabecalho .relatorio-subtitulo {
-        font-size: 9px;
+        font-size: 7px;
     }
 
     /* Controle específico da altura das linhas */
     .tg-cabecalho tr:first-child {
-        height: 150px; /* Linha do logo AUMENTADA */
+        height: 80px; /* Linha do logo mantém altura original */
     }
 
     .tg-cabecalho tr:last-child {
-        height: 60px; /* Segunda linha mantém tamanho padrão */
+        height: 40px; /* Segunda linha menor */
     }
