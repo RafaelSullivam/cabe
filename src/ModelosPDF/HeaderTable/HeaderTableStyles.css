@@ -71,3 +71,29 @@
   max-width: 50px;
   margin-top: 2px;
 }
+
+/* Estilos para impressão - força exibição de backgrounds */
+@media print {
+  .header-amostra {
+    background-color: #068000 !important;
+    color: #fff !important;
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
+/* Classe específica para a caixa da amostra */
+.header-table-model .header-amostra {
+  background-color: #068000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  padding: 8px 15px;
+  text-align: center;
+  border-radius: 4px;
+  font-weight: bold;
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
+  print-color-adjust: exact;
+}

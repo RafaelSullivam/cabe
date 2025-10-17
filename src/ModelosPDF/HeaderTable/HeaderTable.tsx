@@ -55,17 +55,18 @@ const HeaderTable: React.FC<HeaderTableProps> = ({
     <main >
       
     <div className="header-table-model">
-    <header>
-      <div className="header-logo" style={{ display: 'inline-block', width: '539px', paddingTop: '20px' }}>
-        <img src="images/geocontrole.png" width="195px" />
+      
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px', paddingTop: '20px' }}>
+        <div className="header-logo">
+          <img src="images/geocontrole.png" width="195px" />
+        </div>
+        <div className="header-amostra">
+          AMOSTRA Nº: {codSample} / {numberSample}
+        </div>
       </div>
-      <div className="header-amostra" style={{ width: '212px', backgroundColor: 'green', color: '#fff', display: 'inline-block', fontFamily: 'Arial, sans-serif', fontSize: '13px', padding: '2px', textAlign: 'center' }}>
-        AMOSTRA Nº: {codSample} / {numberSample}
-      </div>
-    </header>
-    
   
       <table className="tg-cabecalho">
+        
       <thead>
         <tr>
           <th className="cliente-logo" colSpan={1} rowSpan={2}>
