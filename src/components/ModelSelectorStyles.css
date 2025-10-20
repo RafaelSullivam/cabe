@@ -1,0 +1,229 @@
+/* Estilos para o seletor de modelos PDF */
+.model-selector {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 40px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.model-selector.dark {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: #ecf0f1;
+}
+
+.model-selector-header {
+  text-align: center;
+  margin-bottom: 50px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.model-selector-header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.model-selector.dark .model-selector-header h1 {
+  color: #ecf0f1;
+}
+
+.model-selector-header p {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin: 0;
+}
+
+.model-selector.dark .model-selector-header p {
+  color: #bdc3c7;
+}
+
+.model-categories {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.model-category {
+  margin-bottom: 40px;
+}
+
+.category-title {
+  font-size: 1.5rem;
+  color: #34495e;
+  margin-bottom: 20px;
+  padding-left: 15px;
+  border-left: 4px solid #3498db;
+  font-weight: 600;
+}
+
+.model-selector.dark .category-title {
+  color: #ecf0f1;
+  border-left-color: #74b9ff;
+}
+
+.model-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 0 15px;
+}
+
+.model-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.model-selector.dark .model-card {
+  background: #34495e;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.model-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: #3498db;
+}
+
+.model-selector.dark .model-card:hover {
+  border-color: #74b9ff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.model-card.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.model-card.disabled:hover {
+  transform: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-color: transparent;
+}
+
+.model-selector.dark .model-card.disabled:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.model-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.model-info {
+  text-align: center;
+}
+
+.model-name {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.model-selector.dark .model-name {
+  color: #ecf0f1;
+}
+
+.model-description {
+  font-size: 0.95rem;
+  color: #7f8c8d;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.model-selector.dark .model-description {
+  color: #bdc3c7;
+}
+
+.coming-soon {
+  display: inline-block;
+  background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.model-selector-footer {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid #ecf0f1;
+}
+
+.model-selector.dark .model-selector-footer {
+  border-top-color: #7f8c8d;
+}
+
+.model-selector-footer p {
+  color: #95a5a6;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.model-selector.dark .model-selector-footer p {
+  color: #bdc3c7;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .model-selector {
+    padding: 20px 15px;
+  }
+  
+  .model-selector-header h1 {
+    font-size: 2rem;
+  }
+  
+  .model-selector-header p {
+    font-size: 1rem;
+  }
+  
+  .model-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .model-card {
+    padding: 20px;
+  }
+  
+  .category-title {
+    font-size: 1.3rem;
+  }
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.model-card {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.model-card:nth-child(1) { animation-delay: 0.1s; }
+.model-card:nth-child(2) { animation-delay: 0.2s; }
+.model-card:nth-child(3) { animation-delay: 0.3s; }
+.model-card:nth-child(4) { animation-delay: 0.4s; }

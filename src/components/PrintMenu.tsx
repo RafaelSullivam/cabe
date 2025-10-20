@@ -7,7 +7,7 @@ import {
 } from '../utils/printUtils'
 import { PrintMenuProps } from '../types'
 
-const PrintMenu: React.FC<PrintMenuProps> = ({ darkMode, onToggleDarkMode }) => {
+const PrintMenu: React.FC<PrintMenuProps> = ({ darkMode, onToggleDarkMode, onBackToSelection }) => {
   const handleCopiarDocumento = (): void => {
     copiarDocumento('.a4-container')
   }
@@ -15,6 +15,15 @@ const PrintMenu: React.FC<PrintMenuProps> = ({ darkMode, onToggleDarkMode }) => 
   return (
     <div className="print-menu">
       <h4>🖨️ Menu de Impressão</h4>
+      
+      {onBackToSelection && (
+        <button 
+          className="print-button warning" 
+          onClick={onBackToSelection}
+        >
+          ← Voltar aos Modelos
+        </button>
+      )}
       
       <button 
         className="print-button primary" 

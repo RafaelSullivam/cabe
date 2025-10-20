@@ -1,29 +1,30 @@
 import React from 'react';
 import Footer from '../Footer/Footer';
+import HeaderTable from '../HeaderTable/HeaderTable';
 import { DetermineMaximumAndMinimumSandData } from '../../types/determineMaximumAndMinimumSandTypes';
 import './DetermineMaximumAndMinimumSandStyles.css';
 
 interface DetermineMaximumAndMinimumSandModelProps {
   data: DetermineMaximumAndMinimumSandData;
+  pagina?: number;
+  totalPaginas?: number;
 }
 
-const DetermineMaximumAndMinimumSandModel: React.FC<DetermineMaximumAndMinimumSandModelProps> = ({ data }) => {
+const DetermineMaximumAndMinimumSandModel: React.FC<DetermineMaximumAndMinimumSandModelProps> = ({ data, pagina, totalPaginas }) => {
   return (
     <div className="determine-max-min-container">
-      {/* Header */}
-      <header className="determine-header">
-        <div className="logo-section">
-          <img src="/images/logo.png" alt="Logo Geocontrole" className="logo-image" />
-        </div>
-        <div className="amostra-box">
-          <p>AMOSTRA Nº</p>
-          <p className="amostra-number">{data.numeroAmostra}</p>
-        </div>
-      </header>
+      {/* Header usando HeaderTable */}
+      <HeaderTable 
+        clienteNome={data.cliente}
+        relatorioTitulo="DETERMINAÇÃO DE MASSA ESPECÍFICA"
+        relatorioSubtitulo="MÁXIMA E MÍNIMA DE AREIAS"
+        codSample={data.numeroAmostra}
+        numberSample={data.numeroAmostra}
+      />
 
       {/* Main Content */}
-      <main style={{ marginTop: '45px' }}>
-        {/* Cabeçalho Table */}
+      <main style={{ marginTop: '20px' }}>
+        {/* Tabela de informações específicas do ensaio */}
         <table className="tg-cabecalho">
           <colgroup>
             <col style={{ width: '4%' }} />
@@ -43,9 +44,6 @@ const DetermineMaximumAndMinimumSandModel: React.FC<DetermineMaximumAndMinimumSa
             <col style={{ width: '3%' }} />
           </colgroup>
           <tbody>
-            <tr>
-              <td className="tg-0pky" colSpan={15}>DETERMINAÇÃO DE MASSA ESPECÍFICA MÁXIMA E MÍNIMA DE AREIAS</td>
-            </tr>
             <tr>
               <td className="tg-0pky" colSpan={2}>Obra:</td>
               <td className="tg-0lax" colSpan={6}>{data.obra}</td>
@@ -392,6 +390,8 @@ const DetermineMaximumAndMinimumSandModel: React.FC<DetermineMaximumAndMinimumSa
       {/* Footer */}
       <Footer
         executado={data.executado}
+        pagina={pagina}
+        totalPaginas={totalPaginas}
         signatures={{
           verificador: data.verificado ? {
             Assinatura: data.verificado,

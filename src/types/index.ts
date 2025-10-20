@@ -30,6 +30,7 @@ export interface DadosRelatorio {
 export interface PrintMenuProps {
   darkMode: boolean;
   onToggleDarkMode: () => void;
+  onBackToSelection?: () => void;
 }
 
 export interface A4ContainerProps {

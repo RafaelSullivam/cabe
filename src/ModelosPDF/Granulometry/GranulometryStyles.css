@@ -1,0 +1,308 @@
+/* Estilos para o modelo de Granulometria */
+
+.granulometry-model {
+  width: 100%;
+  font-family: 'Arial', sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #333;
+}
+
+.granulometry-content {
+  padding: 15px;
+  max-width: 100%;
+}
+
+.granulometry-header {
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #2c5aa0;
+  padding-bottom: 10px;
+}
+
+.granulometry-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2c5aa0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.norma-reference {
+  margin-top: 5px;
+  font-size: 11px;
+  color: #666;
+  font-style: italic;
+}
+
+.sample-info {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.info-item label {
+  font-weight: bold;
+  color: #2c5aa0;
+  white-space: nowrap;
+  min-width: 120px;
+}
+
+.info-item span {
+  border-bottom: 1px solid #666;
+  flex: 1;
+  padding-bottom: 2px;
+}
+
+.granulometry-table {
+  margin-bottom: 20px;
+}
+
+.granulometry-table h3 {
+  color: #2c5aa0;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.granulometry-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10px;
+}
+
+.granulometry-table th,
+.granulometry-table td {
+  border: 1px solid #333;
+  padding: 4px 6px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.granulometry-table th {
+  background-color: #2c5aa0;
+  color: white;
+  font-weight: bold;
+  font-size: 9px;
+}
+
+.granulometry-table .total-row {
+  background-color: #e8f0fe;
+  font-weight: bold;
+}
+
+.granulometry-table .total-row td {
+  border-top: 2px solid #2c5aa0;
+}
+
+.granulometry-results {
+  margin-bottom: 20px;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.result-section h4 {
+  color: #2c5aa0;
+  font-size: 12px;
+  margin-bottom: 8px;
+  text-align: center;
+  border-bottom: 1px solid #2c5aa0;
+  padding-bottom: 4px;
+}
+
+.classification-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10px;
+}
+
+.classification-table th,
+.classification-table td {
+  border: 1px solid #333;
+  padding: 4px 6px;
+  text-align: center;
+}
+
+.classification-table th {
+  background-color: #2c5aa0;
+  color: white;
+  font-weight: bold;
+  font-size: 9px;
+}
+
+.parameters {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.parameter-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 8px;
+  background-color: #f8f9fa;
+  border-radius: 3px;
+}
+
+.parameter-item label {
+  font-weight: bold;
+  color: #2c5aa0;
+  font-size: 10px;
+}
+
+.parameter-item span {
+  border-bottom: 1px solid #666;
+  padding-bottom: 2px;
+  min-width: 60px;
+  text-align: center;
+}
+
+.observations {
+  margin-bottom: 20px;
+}
+
+.observations h4 {
+  color: #2c5aa0;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.observation-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.observation-lines div {
+  border-bottom: 1px solid #666;
+  padding-bottom: 2px;
+  height: 16px;
+}
+
+.signatures {
+  margin-top: 30px;
+  page-break-inside: avoid;
+}
+
+.signature-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.signature-line {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.signature-line > div:first-child {
+  border-bottom: 1px solid #333;
+  padding-bottom: 2px;
+  margin-bottom: 5px;
+  height: 30px;
+}
+
+.signature-line > div:nth-child(2) {
+  font-weight: bold;
+  color: #2c5aa0;
+  font-size: 11px;
+}
+
+.signature-line > div:last-child {
+  font-size: 10px;
+  color: #666;
+}
+
+/* Estilos para impressão */
+@media print {
+  .granulometry-model {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+    print-color-adjust: exact;
+    font-size: 11px;
+  }
+
+  .granulometry-table th {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+    print-color-adjust: exact;
+    background-color: #2c5aa0 !important;
+    color: white !important;
+  }
+
+  .sample-info {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+    print-color-adjust: exact;
+    background-color: #f8f9fa !important;
+  }
+
+  .granulometry-table .total-row {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+    print-color-adjust: exact;
+    background-color: #e8f0fe !important;
+  }
+
+  .parameter-item {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+    print-color-adjust: exact;
+    background-color: #f8f9fa !important;
+  }
+
+  .signatures {
+    page-break-inside: avoid;
+  }
+
+  /* Quebra de página antes da tabela se necessário */
+  .granulometry-table {
+    page-break-inside: avoid;
+  }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .signature-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .granulometry-table {
+    overflow-x: auto;
+  }
+
+  .granulometry-table table {
+    min-width: 600px;
+  }
+}

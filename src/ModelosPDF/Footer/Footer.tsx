@@ -9,9 +9,11 @@ interface FooterProps {
     marciel?: { Assinatura: string; Nome: string };
   };
   executado?: string;
+  pagina?: number;
+  totalPaginas?: number;
 }
 
-const Footer: React.FC<FooterProps> = ({ className = '', signatures, executado }) => {
+const Footer: React.FC<FooterProps> = ({ className = '', signatures, executado, pagina, totalPaginas }) => {
   return (
     <footer className={`footer-geocontrole ${className}`}>
       {/* Seção de Assinaturas */}
@@ -91,6 +93,19 @@ const Footer: React.FC<FooterProps> = ({ className = '', signatures, executado }
 
       {/* Informações da empresa */}
       <div style={{ textAlign: 'center' }}>
+        {/* Paginação - se fornecida */}
+        {pagina && totalPaginas && (
+          <div style={{ textAlign: 'right', marginBottom: '5px' }}>
+            <span style={{ 
+              fontSize: '10px', 
+              fontWeight: 'bold', 
+              fontFamily: 'Arial, sans-serif' 
+            }}>
+              Pág: {pagina}/{totalPaginas}
+            </span>
+          </div>
+        )}
+        
         <p style={{ 
           fontSize: '10px', 
           fontWeight: 'bold', 
