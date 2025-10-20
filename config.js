@@ -25,7 +25,7 @@ const CONFIG_THEME = {
     textColor: '#ffffff'
   },
   lightMode: {
-    background: '#e5e5e5',
+    background: '#ffffff',
     containerBg: 'white',
     textColor: 'black'
   }

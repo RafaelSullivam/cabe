@@ -27,11 +27,11 @@ const Footer: React.FC<FooterProps> = ({
   return (
     <footer className={`footer-geocontrole ${className}`}>
       {/* Seção de Assinaturas - sempre renderizada */}
-      <table className="tg tg-cabecalho" style={{ width: '100%', marginBottom: '10px', borderCollapse: 'collapse' }}>
+      <table className="tg tg-cabecalho" style={{ width: '105%', marginBottom: '0px', borderCollapse: 'collapse' }}>
         <tbody>
           {/* Linha de Observação */}
           <tr>
-            <td className="tg-0pky" colSpan={15} style={{ paddingRight: '10px', marginTop: '0px' }}>
+            <td className="tg-0pky" colSpan={15} style={{ paddingRight: '10px', marginTop: '10px' }}>
               <p className="title">Observação:</p>
               <div style={{ height: '15px' }}>
                 {observation || ''}

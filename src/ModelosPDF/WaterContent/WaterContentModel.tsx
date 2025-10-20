@@ -28,10 +28,10 @@ const WaterContentModel: React.FC<WaterContentModelProps> = ({
         numberSample={numberSample}
       />
 
-      <main style={{ marginTop: '45px' }}>
+      <main style={{ marginTop: '20px',width: '100%' }}>
 
         {/* Seção de temperatura de secagem */}
-        <div style={{ marginTop: '4%', height: '60px', textAlign: 'left', display: 'flex', alignItems: 'center' }}>
+        <div style={{ marginTop: '0%', height: '60px', textAlign: 'left', display: 'flex', alignItems: 'center' }}>
           <div style={{ marginRight: '20px', minWidth: '180px' }}>
             <p style={{ fontSize: '13px', margin: 0 }}>Temperatura de secagem:</p>
           </div>
@@ -69,14 +69,15 @@ const WaterContentModel: React.FC<WaterContentModelProps> = ({
         </div>
 
         {/* Tabela principal .tg - estrutura igual ao PHP */}
-        <table className="tg" style={{ paddingRight: '10px' }}>
-          <tbody>
+        <table className="tg" style={{ paddingRight: '10px',color: '#000' }}>
+      
             {/* Linha 1: Contém todas as tabelas de dados (cápsulas + incertezas) */}
-            <tr>
+          
               <td 
                 className="tg-0pky" 
                 colSpan={15} 
                 style={{ 
+                  marginTop: '10px',
                   borderLeft: 'none', 
                   borderRight: 'none', 
                   borderTopColor: '#fff',
@@ -199,10 +200,10 @@ const WaterContentModel: React.FC<WaterContentModelProps> = ({
                   </tbody>
                 </table>
               </td>
-            </tr>
+           
             {/* Linha de Observações */}
           
-          </tbody>
+      
         </table>
 
       </main>

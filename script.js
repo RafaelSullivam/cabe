@@ -57,7 +57,7 @@ function alternarModo() {
     modoEscuro = true;
   } else {
     // Voltar ao modo claro
-    body.style.background = '#e5e5e5';
+    body.style.background = '#ffffff';
     container.style.background = 'white';
     container.style.color = 'black';
     modoEscuro = false;

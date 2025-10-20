@@ -27,8 +27,9 @@
 /* Estilos das tabelas principais */
 .water-content-model .tg {
   border-spacing: 0;
-  width: 100%;
+  width: 105%;
   border-collapse: collapse;
+  margin-left: 0%;
 }
 
 .water-content-model .tg td {
@@ -74,13 +75,6 @@
   margin-bottom: 0 !important;
 }
 
-/* Estilos do cabeçalho */
-.water-content-model .tg-cabecalho {
-  border-collapse: collapse;
-  border-spacing: 0;
-  margin: 0px auto;
-  width: 100%;
-}
 
 .water-content-model .tg-cabecalho td,
 .water-content-model .tg-cabecalho th {

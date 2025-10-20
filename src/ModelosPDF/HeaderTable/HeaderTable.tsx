@@ -31,13 +31,19 @@ const HeaderTable: React.FC<HeaderTableProps> = ({
   ) : null
 
   return (
-    <>      
+    <div style={{ position: 'relative',marginLeft:'-10px',marginTop:'-20px' }}>
+      {/* Imagem ABNT posicionada fora da tabela */}
+      <div className="abnt-logo-container">
+        <img src="images/ABNT.png" width="120px" height="120px" alt="ABNT" className="abnt-logo" />
+      </div>
+      
       <table className="tg-cabecalho">
         <thead>
+           
           {/* Header com logo e amostra */}
-          <tr>
+          <tr className="header-top-row">
             <th colSpan={4} style={{ border: 'none', padding: '10px 0' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', direction: 'ltr' }}>
                 <div>
                   <img src="images/geocontrole.png" width="195px" alt="Geocontrole" />
                 </div>
@@ -47,53 +53,56 @@ const HeaderTable: React.FC<HeaderTableProps> = ({
               </div>
             </th>
           </tr>
-          
           {/* Linha original da tabela */}
           <tr>
-            <th className="tg-cabecalho-0pky col-1" colSpan={2} rowSpan={2}>
-              CLIENTE:
-              <br />
-              {logoElement}
-            </th>
+            
             <th className="tg-cabecalho-0pky col-3" colSpan={2}>
               {relatorioTitulo}:
               <div style={{ marginLeft: '21%', fontSize: '15px', marginTop: '-6px' }}>
                 {relatorioSubtitulo}
               </div>
             </th>
-          </tr>
-          <tr>
-            <th className="tg-cabecalho-0pky col-2" colSpan={1}>
-              PROCESSO / LOTE:<br />
-              <div style={{ textAlign: 'center', fontSize: '13px', marginTop: '4px' }} className="cabecalho-resultado-font"></div>
+
+            <th className="tg-cabecalho-cliente" style={{ width: '105px' }} colSpan={1} rowSpan={2}>
+              CLIENTE:
+              <br />
+              {logoElement}
+              <br />
+             
             </th>
+          </tr>
+          
+          <tr>
+           
             <th className="tg-cabecalho-p1nr">
               PROFUNDIDADE (m):<br />
+              <div style={{ textAlign: 'center', fontSize: '13px', marginTop: '4px' }} className="cabecalho-resultado-font"></div>
+            </th>
+             <th className="tg-cabecalho-0pky col-2" colSpan={1}>
+              PROCESSO / LOTE:<br />
               <div style={{ textAlign: 'center', fontSize: '13px', marginTop: '4px' }} className="cabecalho-resultado-font"></div>
             </th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td className="tg-cabecalho-0pky col-2" colSpan={1} rowSpan={4}>
-              DATA DO REGISTRO:
-              <div style={{ marginTop: '15px' }}>
-                <span className="cabecalho-resultado-font"></span>
-              </div>
-            </td>
-            <td className="tg-cabecalho-0pky col-2" colSpan={1} rowSpan={4}>
-              DATA DE VERIFICAÇÃO:
-              <div style={{ marginTop: '15px' }}>
-                <span className="cabecalho-resultado-font"></span>
-              </div>
-            </td>
-            <td className="tg-cabecalho-0pky col-3" rowSpan={4}>
+          
+           
+          
+            
+            <td className="tg-cabecalho-p1nr">**DATUM:</td>
+              <td className="tg-cabecalho-0pky col-3" rowSpan={4}>
               SONDAGEM:<br />
               <div style={{ textAlign: 'center', fontSize: '12px', marginTop: '9px' }}>
                 <b><span className="cabecalho-resultado-font"></span></b>
               </div>
             </td>
-            <td className="tg-cabecalho-p1nr">**DATUM:</td>
+             <td className="tg-cabecalho-0pky col-2" colSpan={1} rowSpan={4}>
+              DATA DE VERIFICAÇÃO:
+              <div style={{ marginTop: '15px' }}>
+                <span className="cabecalho-resultado-font"></span>
+              </div>
+            </td>
           </tr>
           <tr>
             <td className="tg-cabecalho-p1nr">
@@ -111,18 +120,11 @@ const HeaderTable: React.FC<HeaderTableProps> = ({
             </td>
           </tr>
           <tr>
-            <td className="tg-cabecalho-0pky" rowSpan={2}>
-              DATA DE CONCLUSÃO:
-              <div style={{ marginTop: '15px' }}>
-                <span className="cabecalho-resultado-font"></span>
-              </div>
-              <br />
-            </td>
-            <td className="tg-cabecalho-0pky" rowSpan={2}>
-              **APLICAÇÃO:
-              <div style={{ marginTop: '15px' }}>
-                <span className="cabecalho-resultado-font"></span>
-              </div>
+            
+          
+            
+            <td className="tg-cabecalho-p1nr" rowSpan={2}>
+              **ESPECIFICAÇÃO TÉCNICA: <span className="cabecalho-resultado-font"></span>
             </td>
             <td className="tg-cabecalho-0pky col-3">
               **OBRA: <br />
@@ -130,8 +132,17 @@ const HeaderTable: React.FC<HeaderTableProps> = ({
                 <b><span className="cabecalho-resultado-font"></span></b>
               </div>
             </td>
-            <td className="tg-cabecalho-p1nr" rowSpan={2}>
-              **ESPECIFICAÇÃO TÉCNICA: <span className="cabecalho-resultado-font"></span>
+              <td className="tg-cabecalho-data-conclusao" rowSpan={2}>
+              **APLICAÇÃO:
+              <div style={{ marginTop: '15px' }}>
+                <span className="cabecalho-resultado-font"></span>
+              </div>
+            </td>
+            <td className="tg-cabecalho-data-conclusao tg-cabecalho-data-conclusao" rowSpan={2}>
+              DATA DE CONCLUSÃO:
+              <div style={{ marginTop: '8px', fontSize: '9px' }}>
+                <span className="cabecalho-resultado-font"></span>
+              </div>
             </td>
           </tr>
           <tr>
@@ -144,7 +155,7 @@ const HeaderTable: React.FC<HeaderTableProps> = ({
           </tr>
         </tbody>
       </table>
-    </>
+    </div>
   )
 }
 

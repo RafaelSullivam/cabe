@@ -13,7 +13,7 @@ body {
 
 header {
   position: fixed;
-  top: 0cm;
+  top: -10cm;
   left: 0cm;
   right: 0cm;
   height: 3cm;
@@ -23,10 +23,13 @@ header {
 .tg-cabecalho {
   border-collapse: collapse;
   border-spacing: 0;
-  margin: 0px auto;
-  width: 100%;
-  margin-bottom: 13px;
+ margin-right: -10%;
+  width: 105%;
+  margin-bottom: 25px;
+  direction: rtl;
 }
+/* Estilos do cabeçalho */
+
 
 .tg-cabecalho td,
 .tg-cabecalho th {
@@ -36,9 +39,11 @@ header {
   font-family: Arial, sans-serif;
   font-size: 10px;
   overflow: hidden;
-  padding: 2px 5px;
+  padding: 2px 2px;
   word-break: normal;
   vertical-align: middle;
+  direction: ltr;
+  text-align: left;
 }
 
 .tg-cabecalho th {
@@ -67,6 +72,7 @@ header {
   border-color: inherit;
   text-align: left;
   vertical-align: top;
+  
 }
 
 .tg-cabecalho .tg-cabecalho-0pky .title {
@@ -78,6 +84,28 @@ header {
 /* Classe para resultado em negrito */
 .cabecalho-resultado-font {
   font-weight: bold;
+}
+
+/* Estilo específico para o campo DATA DE CONCLUSÃO */
+.tg-cabecalho-data-conclusao {
+  width: 100px !important;
+  max-width: 120px !important;
+  min-height: 60px !important;
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  vertical-align: top !important;
+  padding: 4px 2px !important;
+  font-size: 9px !important;
+  height: 70px !important;
+}
+
+/* Estilo específico para a célula CLIENTE */
+.tg-cabecalho-cliente {
+  width: 120px !important;
+  min-width: 120px !important;
+  
+  vertical-align: top !important;
 }
 
 /* Ajustes de alinhamento para textos */
@@ -112,11 +140,79 @@ header {
   margin-top: 10px;
 }
 
-/* Estilos para impressão - força exibição de backgrounds */
+/* Header superior com logo e amostra - manter LTR */
+.header-top-row {
+  direction: ltr !important;
+}
+
+.header-top-row div {
+  direction: ltr !important;
+}
+
+/* Container da imagem ABNT */
+.abnt-logo-container {
+  position: absolute;
+  top: 50px;
+  right: 525px;
+  z-index: 10;
+}
+
+.abnt-logo {
+  display: block;
+  width: 160px;
+  height: 120px;
+  object-fit: contain;
+}
+
+/* Estilos para impressão */
 @media print {
   .header-amostra {
     background-color: green !important;
     color: #fff !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Imagem ABNT na impressão - ajustado para ficar igual à tela */
+  .abnt-logo-container {
+    position: absolute !important;
+    top: 45px !important;
+    right: 570px !important;
+    z-index: 10 !important;
+  }
+
+  .abnt-logo {
+    display: block !important;
+    width: 160px !important;
+    height: 110px !important;
+    object-fit: contain !important;
+    max-width: 160px !important;
+    max-height: 110px !important;
+  }
+
+  /* Estilo para DATA DE CONCLUSÃO na impressão */
+  .tg-cabecalho-data-conclusao {
+    width: 100px !important;
+    max-width: 120px !important;
+    min-height: 60px !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    vertical-align: top !important;
+    padding: 4px 2px !important;
+    font-size: 9px !important;
+  }
+
+  /* Estilo para célula CLIENTE na impressão */
+  .tg-cabecalho-cliente {
+    width: 130px !important;
+    min-width: 130px !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+  }
+
+  /* Garante que elementos posicionados absolutamente sejam impressos */
+  * {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }

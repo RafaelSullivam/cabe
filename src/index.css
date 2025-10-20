@@ -4,7 +4,7 @@
 }
 
 body {
-  background: #e5e5e5; /* Fundo cinza para simular mesa */
+  background: #fff; /* Fundo cinza para simular mesa */
   padding: 20px;
   margin: 0;
   font-family: Arial, sans-serif;
@@ -105,7 +105,7 @@ body {
 }
 
 .print-button.secondary:hover {
-  background-color: #e0e0e0;
+  background-color: #ec3535;
 }
 
 .print-button.success {

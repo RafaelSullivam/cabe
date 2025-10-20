@@ -15,7 +15,7 @@ const useDarkMode = (): UseDarkModeReturn => {
     if (darkMode) {
       document.body.style.background = '#2c2c2c'
     } else {
-      document.body.style.background = '#e5e5e5'
+      document.body.style.background = '#ffff'
     }
   }, [darkMode])
 
