@@ -80,3 +80,18 @@ export interface SystemMessages {
 
 // Hook personalizado
 export type UseDarkModeReturn = [boolean, () => void];
+
+// Export all model types
+export * from './waterContentTypes';
+export * from './actualSpecificMassInGrainsTypes';
+export * from './determinationOfApparentSpecificMassTypes';
+export * from './pdlTypes';
+export * from './pdlGraphTypes';
+export * from './pdlPhotoTypes';
+export * from './mainSheetTypes';
+export * from './determineMaximumAndMinimumSandTypes';
+export * from './granulometricAnalysisBySievingTypes';
+export * from './compressionTypes';
+export * from './limitOfLiquidityAndPlasticityTypes';
+export * from './determinationOfSpecificMassOfConstantMassTypes';
+export * from './determinationOfTheSpecificMassOfVariableMassTypes';

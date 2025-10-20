@@ -1,0 +1,82 @@
+/* DeterminationOfApparentSpecificMass Styles */
+
+body {
+  margin-top: 1.2cm;
+}
+
+@page {
+  margin-left: 0.6cm;
+  margin-right: 0.3cm;
+  margin-top: 0.1cm;
+  margin-bottom: 0.1cm;
+}
+
+/* Tabela de determinação */
+.tg-determinacao {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0px auto;
+}
+
+.tg-determinacao td {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  overflow: hidden;
+  padding: 5px 5px;
+  word-break: normal;
+  vertical-align: middle;
+}
+
+.tg-determinacao th {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  overflow: hidden;
+  padding: 2px 3px;
+  word-break: normal;
+}
+
+.tg-determinacao .tg-determinacao-34fe {
+  background-color: #c0c0c0;
+  font-weight: bold;
+  border-color: inherit;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.tg-determinacao .tg-determinacao-c3ow {
+  border-color: inherit;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.tg-determinacao .tg-determinacao-0pky {
+  border-color: inherit;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.tg-determinacao .tg-main-table-c3ow {
+  border-color: inherit;
+  font-size: 12px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 2px 3px;
+  font-family: Arial Unicode MS, DejaVu Sans, Arial, sans-serif;
+}
+
+.tg-determinacao .tg-main-table-c1ow {
+  border-color: inherit;
+  font-size: 12px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 2px 3px;
+  font-family: Arial Unicode MS, DejaVu Sans, Arial, sans-serif;
+  width: 48px !important;
+}

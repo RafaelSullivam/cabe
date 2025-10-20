@@ -1,0 +1,42 @@
+/* Estilos do Footer - Copiado do PHP */
+
+.footer-geocontrole {
+  position: fixed;
+  left: 0;
+  bottom: 50px;
+  width: 100%;
+  background: #fff;
+  z-index: 100;
+  text-align: center;
+}
+
+.footer-geocontrole p {
+  font-size: 10px;
+  font-weight: bold;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer-geocontrole div {
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos para impressão */
+@media print {
+  .footer-geocontrole {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .footer-geocontrole div {
+    background-color: green !important;
+    color: #fff !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}

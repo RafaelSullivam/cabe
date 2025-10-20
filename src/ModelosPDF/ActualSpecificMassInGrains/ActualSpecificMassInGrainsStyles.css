@@ -1,0 +1,132 @@
+/* ActualSpecificMassInGrains Styles */
+
+body {
+  margin-top: 1.2cm;
+}
+
+@page {
+  margin-left: 0.6cm;
+  margin-right: 0.3cm;
+  margin-top: 0.1cm;
+  margin-bottom: 0.1cm;
+}
+
+/* Tabela principal */
+.tg-main-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0px auto;
+}
+
+.tg-main-table td {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  overflow: hidden;
+  padding: 3px 3px;
+  white-space: nowrap;
+}
+
+.tg-main-table th {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: normal;
+  overflow: hidden;
+  padding: 2px 2px;
+  word-break: normal;
+}
+
+.tg-main-table .tg-main-table-ey1n {
+  border-color: inherit;
+  font-size: 12px;
+  font-weight: normal !important;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.tg-main-table .tg-main-table-c3ow {
+  border-color: inherit;
+  font-size: 12px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 3px 3px;
+  font-family: Arial Unicode MS, DejaVu Sans, Arial, sans-serif;
+}
+
+.tg-main-table .tg-main-table-c1ow {
+  border-color: inherit;
+  font-size: 12px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 5px 5px;
+  font-family: Arial Unicode MS, DejaVu Sans, Arial, sans-serif;
+  width: 48px !important;
+}
+
+.tg-main-table .tg-main-table-umgj {
+  border-color: inherit;
+  font-size: 10px;
+  font-weight: normal !important;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.tg-main-table .tg-main-table-fymr {
+  border-color: inherit;
+  font-weight: normal !important;
+  font-size: 12px;
+  text-align: left;
+  vertical-align: middle;
+  padding: 5px 5px;
+  width: 300px !important;
+}
+
+.tg-main-table .tg-main-table-lqf5 {
+  background-color: #c8c8c8;
+  border-color: inherit;
+  color: #000000;
+  text-align: center;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+/* Seção de Tipo de Secagem */
+.tipo-secagem-container {
+  margin-top: 1%;
+  height: 40px;
+  text-align: left;
+}
+
+.tipo-secagem-label {
+  display: inline-block;
+  padding-right: 2px;
+  font-size: 13px;
+}
+
+.tipo-secagem-checkboxes {
+  display: inline-block;
+  font-size: 13px;
+  margin-top: 1px;
+  border-left: 2px solid #000;
+  padding-left: 8px;
+  padding-top: 1px;
+}
+
+.tipo-secagem-checkboxes label {
+  font-size: 10px;
+  vertical-align: middle;
+}
+
+/* Título da tabela de incertezas */
+.incertezas-title {
+  margin-top: 10px;
+  text-align: left;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { WaterContentModelProps } from '../../types/waterContentTypes';
 import HeaderTable from '../HeaderTable/HeaderTable';
+import Footer from '../Footer/Footer';
 import './WaterContentStyles.css';
 
 const WaterContentModel: React.FC<WaterContentModelProps> = ({
@@ -18,15 +19,16 @@ const WaterContentModel: React.FC<WaterContentModelProps> = ({
   return (
     <div className="water-content-model">
       {/* Cabeçalho usando componente HeaderTable */}
+      <HeaderTable
+        logo={logo}
+        clienteNome="CLIENTE"
+        relatorioTitulo="RELATÓRIO ENSAIO"
+        relatorioSubtitulo="DETERMINAÇÃO DO TEOR DE UMIDADE DO SOLO"
+        codSample={codSample}
+        numberSample={numberSample}
+      />
+
       <main style={{ marginTop: '45px' }}>
-        <HeaderTable
-          logo={logo}
-          clienteNome="CLIENTE"
-          relatorioTitulo="RELATÓRIO ENSAIO"
-          relatorioSubtitulo="DETERMINAÇÃO DO TEOR DE UMIDADE DO SOLO"
-          codSample={codSample}
-          numberSample={numberSample}
-        />
 
         {/* Seção de temperatura de secagem */}
         <div style={{ marginTop: '4%', height: '40px', textAlign: 'left' }}>
@@ -62,177 +64,172 @@ const WaterContentModel: React.FC<WaterContentModelProps> = ({
           </div>
         </div>
 
-        {/* Tabela de dados das cápsulas */}
-        <table className="tg-tabela-de-capsula" style={{ marginTop: '10px', width: '100%' }}>
-          <thead>
-            <tr>
-              <th className="tg-tabela-de-capsula-0r18">CÁPSULA</th>
-              <th className="tg-tabela-de-capsula-0r18">1</th>
-              <th className="tg-tabela-de-capsula-0r18">2</th>
-              <th className="tg-tabela-de-capsula-0r18">3</th>
-              <th className="tg-tabela-de-capsula-0r18">4</th>
-            </tr>
-          </thead>
+        {/* Tabela principal .tg - estrutura igual ao PHP */}
+        <table className="tg" style={{ paddingRight: '10px' }}>
           <tbody>
+            {/* Linha 1: Contém todas as tabelas de dados (cápsulas + incertezas) */}
             <tr>
-              <td className="tg-tabela-de-capsula-0r18">NÚMERO DA CÁPSULA</td>
-              <td className="tg-tabela-de-capsula-0r10">{dataRehearsal.Capsula1}</td>
-              <td className="tg-tabela-de-capsula-0r10">{dataRehearsal.Capsula2}</td>
-              <td className="tg-tabela-de-capsula-0r10">{dataRehearsal.Capsula3}</td>
-              <td className="tg-tabela-de-capsula-0r10">{dataRehearsal.Capsula4}</td>
+              <td 
+                className="tg-0pky" 
+                colSpan={15} 
+                style={{ 
+                  borderLeft: 'none', 
+                  borderRight: 'none', 
+                  borderTopColor: '#fff',
+                  paddingLeft: '0px',
+                  paddingRight: '0px',
+                  height: '605px'
+                }}
+              >
+                {/* Tabela de dados das cápsulas */}
+                <table className="tg-tabela-de-capsula" style={{ marginTop: '0px', width: '100%' }}>
+                  <colgroup>
+                    <col style={{ width: '252.2px' }} />
+                    <col style={{ width: '42.2px' }} />
+                    <col style={{ width: '54.2px' }} />
+                    <col style={{ width: '54.2px' }} />
+                    <col style={{ width: '54.2px' }} />
+                    <col style={{ width: '54.2px' }} />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <td className="tg-tabela-de-capsula-0r18" style={{ textAlign: 'left' }}>Cápsula</td>
+                      <td className="tg-tabela-de-capsula-0r18">Nº</td>
+                      <td className="tg-tabela-de-capsula-0r18" style={{ width: '50px' }}>{dataRehearsal.Capsula1}</td>
+                      <td className="tg-tabela-de-capsula-0r18" style={{ width: '50px' }}>{dataRehearsal.Capsula2}</td>
+                      <td className="tg-tabela-de-capsula-0r18" style={{ width: '50px' }}>{dataRehearsal.Capsula3}</td>
+                      <td className="tg-tabela-de-capsula-0r18" style={{ width: '50px' }}>{dataRehearsal.Capsula4}</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="tg-tabela-de-capsula-0r18" style={{ textAlign: 'left' }}>Massa de amostra úmida + cápsula</td>
+                      <td className="tg-tabela-de-capsula-0r18">g</td>
+                      <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaUmida1}</td>
+                      <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaUmida2}</td>
+                      <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaUmida3}</td>
+                      <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaUmida4}</td>
+                    </tr>
+                    <tr>
+                      <td className="tg-tabela-de-capsula-0r18" style={{ textAlign: 'left' }}>Massa da amostra seca + cápsula</td>
+                      <td className="tg-tabela-de-capsula-0r18">g</td>
+                      <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaSeca1}</td>
+                      <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaSeca2}</td>
+                      <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaSeca3}</td>
+                      <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaSeca4}</td>
+                    </tr>
+                    <tr>
+                      <td className="tg-tabela-de-capsula-0r18" style={{ textAlign: 'left' }}>Massa da cápsula</td>
+                      <td className="tg-tabela-de-capsula-0r18">g</td>
+                      <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaCapsula1}</td>
+                      <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaCapsula2}</td>
+                      <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaCapsula3}</td>
+                      <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaCapsula4}</td>
+                    </tr>
+                    <tr>
+                      <td className="tg-tabela-de-capsula-0r18" style={{ textAlign: 'left' }}>Massa da água</td>
+                      <td className="tg-tabela-de-capsula-0r18">g</td>
+                      <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaAgua1}</td>
+                      <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaAgua2}</td>
+                      <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaAgua3}</td>
+                      <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaAgua4}</td>
+                    </tr>
+                    <tr>
+                      <td className="tg-tabela-de-capsula-0r18" style={{ textAlign: 'left' }}>Massa do solo seco</td>
+                      <td className="tg-tabela-de-capsula-0r18">g</td>
+                      <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaSoloSeco1}</td>
+                      <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaSoloSeco2}</td>
+                      <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaSoloSeco3}</td>
+                      <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaSoloSeco4}</td>
+                    </tr>
+                    <tr>
+                      <td className="tg-tabela-de-capsula-0r18" style={{ textAlign: 'left' }}>Teor de umidade</td>
+                      <td className="tg-tabela-de-capsula-0r18">%</td>
+                      <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.TeorAgua1}</td>
+                      <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.TeorAgua2}</td>
+                      <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.TeorAgua3}</td>
+                      <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.TeorAgua4}</td>
+                    </tr>
+                    <tr>
+                      <td className="tg-tabela-de-capsula-0r18" style={{ textAlign: 'left' }}>Teor de umidade médio</td>
+                      <td className="tg-tabela-de-capsula-0r18">%</td>
+                      <td 
+                        className="tg-tabela-de-capsula-0r18" 
+                        style={{ backgroundColor: '#c8c8c8', fontWeight: 'bold' }}
+                        colSpan={4}
+                      >
+                        {dataRehearsal.Media}
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                {/* Título da tabela de incertezas */}
+                <div style={{ 
+                  marginTop: '15px', 
+                  textAlign: 'left', 
+                  fontSize: '12px', 
+                  fontFamily: 'Arial, sans-serif',
+                  fontWeight: 'bold'
+                }}>
+                  Tabela de Incertezas do resultado do ensaio
+                </div>
+
+                {/* Tabela de incertezas */}
+                <table className="tg-tabela-de-capsula-2" style={{ width: '100%', marginTop: '5px' }}>
+                  <tbody>
+                    <tr style={{ marginTop: '5px', height: '4px' }}>
+                      <td className="tg-tabela-de-capsula-0r18" style={{ textAlign: 'left', width: '442.2px' }}>
+                        Incerteza Expandida
+                      </td>
+                      <td className="tg-tabela-de-capsula-0r10">%</td>
+                      <td className="tg-tabela-de-capsula-0r18" colSpan={4}>{dataRehearsal.Incerteza}</td>
+                    </tr>
+                    <tr style={{ marginTop: '5px', height: '5px' }}>
+                      <td className="tg-tabela-de-capsula-0r18" style={{ textAlign: 'left' }}>
+                        Fator de Expansão
+                      </td>
+                      <td className="tg-tabela-de-capsula-0r10">k</td>
+                      <td className="tg-tabela-de-capsula-0r18" colSpan={4}>{dataRehearsal.Expansao}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
             </tr>
+            {/* Linha de Observações */}
             <tr>
-              <td className="tg-tabela-de-capsula-0r18">MASSA ÚMIDA + CÁPSULA (g)</td>
-              <td className="tg-tabela-de-capsula-0r10">{dataRehearsal.MassaUmida1}</td>
-              <td className="tg-tabela-de-capsula-0r10">{dataRehearsal.MassaUmida2}</td>
-              <td className="tg-tabela-de-capsula-0r10">{dataRehearsal.MassaUmida3}</td>
-              <td className="tg-tabela-de-capsula-0r10">{dataRehearsal.MassaUmida4}</td>
+              <td className="tg-0pky" colSpan={15} style={{ paddingRight: '10px', marginTop: '0px' }}>
+                <p className="title">Observação:</p>
+                <div style={{ height: '15px' }}>
+                  {observation || '- Os resultados referem-se somente às amostras ensaiadas.\n- A incerteza expandida foi determinada multiplicando-se a incerteza padrão combinada pelo fator de expansão k=2, que para uma distribuição normal corresponde a uma probabilidade de abrangência de aproximadamente 95%.\n- Este relatório só pode ser reproduzido na sua totalidade.'}
+                </div>
+              </td>
             </tr>
+
+            {/* Linha final: Código laboratório, Data de Emissão e Paginação */}
             <tr>
-              <td className="tg-tabela-de-capsula-0r18">MASSA SECA + CÁPSULA (g)</td>
-              <td className="tg-tabela-de-capsula-0r10">{dataRehearsal.MassaSeca1}</td>
-              <td className="tg-tabela-de-capsula-0r10">{dataRehearsal.MassaSeca2}</td>
-              <td className="tg-tabela-de-capsula-0r10">{dataRehearsal.MassaSeca3}</td>
-              <td className="tg-tabela-de-capsula-0r10">{dataRehearsal.MassaSeca4}</td>
-            </tr>
-            <tr>
-              <td className="tg-tabela-de-capsula-0r18">MASSA DA CÁPSULA (g)</td>
-              <td className="tg-tabela-de-capsula-0r10">{dataRehearsal.MassaCapsula1}</td>
-              <td className="tg-tabela-de-capsula-0r10">{dataRehearsal.MassaCapsula2}</td>
-              <td className="tg-tabela-de-capsula-0r10">{dataRehearsal.MassaCapsula3}</td>
-              <td className="tg-tabela-de-capsula-0r10">{dataRehearsal.MassaCapsula4}</td>
-            </tr>
-            <tr>
-              <td className="tg-tabela-de-capsula-0r18">MASSA DA ÁGUA (g)</td>
-              <td className="tg-tabela-de-capsula-0r10">{dataRehearsal.MassaAgua1}</td>
-              <td className="tg-tabela-de-capsula-0r10">{dataRehearsal.MassaAgua2}</td>
-              <td className="tg-tabela-de-capsula-0r10">{dataRehearsal.MassaAgua3}</td>
-              <td className="tg-tabela-de-capsula-0r10">{dataRehearsal.MassaAgua4}</td>
-            </tr>
-            <tr>
-              <td className="tg-tabela-de-capsula-0r18">MASSA DO SOLO SECO (g)</td>
-              <td className="tg-tabela-de-capsula-0r10">{dataRehearsal.MassaSoloSeco1}</td>
-              <td className="tg-tabela-de-capsula-0r10">{dataRehearsal.MassaSoloSeco2}</td>
-              <td className="tg-tabela-de-capsula-0r10">{dataRehearsal.MassaSoloSeco3}</td>
-              <td className="tg-tabela-de-capsula-0r10">{dataRehearsal.MassaSoloSeco4}</td>
-            </tr>
-            <tr>
-              <td className="tg-tabela-de-capsula-0r18">TEOR DE ÁGUA (%)</td>
-              <td className="tg-tabela-de-capsula-0r10">{dataRehearsal.TeorAgua1}</td>
-              <td className="tg-tabela-de-capsula-0r10">{dataRehearsal.TeorAgua2}</td>
-              <td className="tg-tabela-de-capsula-0r10">{dataRehearsal.TeorAgua3}</td>
-              <td className="tg-tabela-de-capsula-0r10">{dataRehearsal.TeorAgua4}</td>
+              <td className="tg-0pky" colSpan={15} style={{ padding: '4px 0px 0px 5px' }}>
+                <div style={{ width: '245px', display: 'inline-block' }}>
+                  <p className="title">Código laboratório: PP-LB-008-02</p>
+                </div>
+                <div style={{ width: '447px', display: 'inline-block' }}>
+                  <p className="title">DATA EMISSÃO: {dataFormatada}</p>
+                </div>
+                <div style={{ display: 'inline-block' }}>
+                  <p className="title">Pág: {pagina}/{totalPaginas}</p>
+                </div>
+              </td>
             </tr>
           </tbody>
         </table>
-
-        {/* Seção de resultados finais */}
-        <table className="tg-tabela-de-capsula-2" style={{ marginTop: '15px' }}>
-          <tbody>
-            <tr>
-              <td className="tg-tabela-de-capsula-0r18" style={{ width: '200px', backgroundColor: '#f0f0f0' }}>
-                MÉDIA (%)
-              </td>
-              <td className="tg-tabela-de-capsula-0r10" style={{ fontWeight: 'bold' }}>
-                {dataRehearsal.Media}
-              </td>
-            </tr>
-            <tr>
-              <td className="tg-tabela-de-capsula-0r18" style={{ backgroundColor: '#f0f0f0' }}>
-                INCERTEZA EXPANDIDA (%)
-              </td>
-              <td className="tg-tabela-de-capsula-0r10">
-                {dataRehearsal.Incerteza}
-              </td>
-            </tr>
-            <tr>
-              <td className="tg-tabela-de-capsula-0r18" style={{ backgroundColor: '#f0f0f0' }}>
-                FATOR DE EXPANSÃO K
-              </td>
-              <td className="tg-tabela-de-capsula-0r10">
-                {dataRehearsal.Expansao}
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-        {/* Observações finais */}
-        <div style={{ marginTop: '20px', fontSize: '11px' }}>
-          <p><strong>Observações:</strong></p>
-          <p>- Os resultados referem-se somente às amostras ensaiadas.</p>
-          <p>- A incerteza expandida foi determinada multiplicando-se a incerteza padrão combinada pelo fator de expansão k=2, que para uma distribuição normal corresponde a uma probabilidade de abrangência de aproximadamente 95%.</p>
-          <p>- Este relatório só pode ser reproduzido na sua totalidade.</p>
-        </div>
-
-        {/* Seção de assinaturas */}
-        <div style={{ marginTop: '30px' }}>
-          <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-            <tbody>
-              <tr>
-                <td style={{ width: '33%', textAlign: 'center', padding: '20px 10px' }}>
-                  {signatures?.verificador && (
-                    <>
-                      <img 
-                        src={`data:image/jpeg;base64,${signatures.verificador.Assinatura}`}
-                        alt="Assinatura Verificador"
-                        style={{ maxWidth: '150px', maxHeight: '50px' }}
-                      />
-                      <div style={{ borderTop: '1px solid black', marginTop: '5px', paddingTop: '5px' }}>
-                        {signatures.verificador.Nome}
-                      </div>
-                      <div style={{ fontSize: '10px', marginTop: '2px' }}>
-                        VERIFICADO
-                      </div>
-                    </>
-                  )}
-                </td>
-                <td style={{ width: '33%', textAlign: 'center', padding: '20px 10px' }}>
-                  {signatures?.aprovador && (
-                    <>
-                      <img 
-                        src={`data:image/jpeg;base64,${signatures.aprovador.Assinatura}`}
-                        alt="Assinatura Aprovador"
-                        style={{ maxWidth: '150px', maxHeight: '50px' }}
-                      />
-                      <div style={{ borderTop: '1px solid black', marginTop: '5px', paddingTop: '5px' }}>
-                        {signatures.aprovador.Nome}
-                      </div>
-                      <div style={{ fontSize: '10px', marginTop: '2px' }}>
-                        APROVADO
-                      </div>
-                    </>
-                  )}
-                </td>
-                <td style={{ width: '33%', textAlign: 'center', padding: '20px 10px' }}>
-                  {signatures?.marciel && (
-                    <>
-                      <img 
-                        src={`data:image/jpeg;base64,${signatures.marciel.Assinatura}`}
-                        alt="Assinatura Marciel"
-                        style={{ maxWidth: '150px', maxHeight: '50px' }}
-                      />
-                      <div style={{ borderTop: '1px solid black', marginTop: '5px', paddingTop: '5px' }}>
-                        {signatures.marciel.Nome}
-                      </div>
-                      <div style={{ fontSize: '10px', marginTop: '2px' }}>
-                        EXECUTADO
-                      </div>
-                    </>
-                  )}
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
 
       </main>
 
-      {/* Footer da página */}
-      <footer className="footer">
-        <div style={{ fontSize: '10px', textAlign: 'center' }}>
-          Data: {dataFormatada} | Página {pagina} de {totalPaginas}
-        </div>
-      </footer>
+      {/* Footer da página - Componente reutilizável com assinaturas */}
+      <Footer 
+        signatures={signatures}
+        executado={dataRehearsal.Executado}
+      />
     </div>
   );
 };

@@ -171,6 +171,15 @@
   height: 10px;
 }
 
+.water-content-model .tg-tabela-de-capsula-2 tr {
+  height: auto;
+  line-height: 2;
+}
+
+.water-content-model .tg-tabela-de-capsula-2 th {
+  font-weight: normal;
+}
+
 .water-content-model .tg-tabela-de-capsula .tg-tabela-de-capsula-0r18,
 .water-content-model .tg-tabela-de-capsula-2 .tg-tabela-de-capsula-0r18 {
   border-color: inherit;
@@ -190,6 +199,13 @@
   padding-top: 13px;
   padding-bottom: 13px;
   width: 42.2px !important;
+}
+
+.water-content-model .tg-tabela-de-capsula .tg-tabela-de-capsula-zd5i {
+  border-color: inherit;
+  font-size: 14px;
+  text-align: left;
+  vertical-align: middle;
 }
 
 /* Estilos adicionais */
