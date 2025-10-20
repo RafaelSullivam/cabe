@@ -229,6 +229,10 @@ const WaterContentModel: React.FC<WaterContentModelProps> = ({
       <Footer 
         signatures={signatures}
         executado={dataRehearsal.Executado}
+        pagina={pagina}
+        totalPaginas={totalPaginas}
+        dataEmissao={new Date().toLocaleDateString('pt-BR')}
+        observation={observation || ''}
       />
     </div>
   );

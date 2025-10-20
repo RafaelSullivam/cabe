@@ -11,15 +11,34 @@ interface FooterProps {
   executado?: string;
   pagina?: number;
   totalPaginas?: number;
+  observation?: string;
+  dataEmissao?: string;
 }
 
-const Footer: React.FC<FooterProps> = ({ className = '', signatures, executado, pagina, totalPaginas }) => {
+const Footer: React.FC<FooterProps> = ({ 
+  className = '', 
+  signatures, 
+  executado, 
+  pagina, 
+  totalPaginas, 
+  observation, 
+  dataEmissao 
+}) => {
   return (
     <footer className={`footer-geocontrole ${className}`}>
       {/* Seção de Assinaturas */}
       {signatures && (
         <table style={{ width: '100%', marginBottom: '10px', borderCollapse: 'collapse' }}>
           <tbody>
+            {/* Linha de Observação */}
+            <tr>
+              <td className="tg-0pky" colSpan={15} style={{ paddingRight: '10px', marginTop: 0 }}>
+                <p className="title">Observação:</p>
+                <div style={{ height: '15px' }}>{observation || ''}</div>
+              </td>
+            </tr>
+            
+            {/* Linha de Assinaturas */}
             <tr>
               <td className="tg-0pky" colSpan={5}>
                 <p className="title" style={{ top: 0 }}>Execução:</p>
@@ -87,25 +106,27 @@ const Footer: React.FC<FooterProps> = ({ className = '', signatures, executado, 
                 )}
               </td>
             </tr>
+            
+            {/* Linha com Código laboratório, Data emissão e Paginação */}
+            <tr>
+              <td className="tg-0pky" colSpan={15} style={{ padding: '4px 0px 0px 5px' }}>
+                <div style={{ width: '245px', display: 'inline-block' }}>
+                  <p className="title">Código laboratório: PP-LB-008-02</p>
+                </div>
+                <div style={{ width: '447px', display: 'inline-block' }}>
+                  <p className="title">DATA EMISSÃO: {dataEmissao || new Date().toLocaleDateString('pt-BR')}</p>
+                </div>
+                <div style={{ display: 'inline-block' }}>
+                  <p className="title">Pág: {pagina || 1}/{totalPaginas || 1}</p>
+                </div>
+              </td>
+            </tr>
           </tbody>
         </table>
       )}
 
       {/* Informações da empresa */}
       <div style={{ textAlign: 'center' }}>
-        {/* Paginação - se fornecida */}
-        {pagina && totalPaginas && (
-          <div style={{ textAlign: 'right', marginBottom: '5px' }}>
-            <span style={{ 
-              fontSize: '10px', 
-              fontWeight: 'bold', 
-              fontFamily: 'Arial, sans-serif' 
-            }}>
-              Pág: {pagina}/{totalPaginas}
-            </span>
-          </div>
-        )}
-        
         <p style={{ 
           fontSize: '10px', 
           fontWeight: 'bold', 
@@ -122,11 +143,15 @@ const Footer: React.FC<FooterProps> = ({ className = '', signatures, executado, 
         }}>
           Av.Canadá, Nº 159 - Jardim Canadá Nova Lima - Minas Gerais - Brasil - CEP: 34007-654 Tel.: +55 31 3517-9011
         </p>
+        
+        {/* Linha verde com site/email */}
         <div style={{ 
           width: '100%', 
           backgroundColor: 'green', 
           color: '#fff', 
-          fontFamily: 'Arial, sans-serif' 
+          fontFamily: 'Arial, sans-serif',
+          padding: '2px 10px',
+          textAlign: 'center'
         }}>
           www.geocontrole.com - e-mail: mail.br@geocontrole.com
         </div>

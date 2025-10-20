@@ -392,6 +392,7 @@ const DetermineMaximumAndMinimumSandModel: React.FC<DetermineMaximumAndMinimumSa
         executado={data.executado}
         pagina={pagina}
         totalPaginas={totalPaginas}
+        dataEmissao={data.dataEmissao || new Date().toLocaleDateString('pt-BR')}
         signatures={{
           verificador: data.verificado ? {
             Assinatura: data.verificado,

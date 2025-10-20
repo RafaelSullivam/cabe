@@ -1,13 +1,11 @@
 /* Estilos do Footer - Copiado do PHP */
 
 .footer-geocontrole {
-  position: fixed;
-  left: 0;
-  bottom: 50px;
+  position: static;
   width: 100%;
   background: #fff;
-  z-index: 100;
   text-align: center;
+  margin-top: 20px;
 }
 
 .footer-geocontrole p {
@@ -24,10 +22,8 @@
 /* Estilos para impressão */
 @media print {
   .footer-geocontrole {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    position: static;
+    margin-top: 20px;
     background: #fff !important;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
