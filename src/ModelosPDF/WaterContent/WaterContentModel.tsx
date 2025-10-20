@@ -31,36 +31,40 @@ const WaterContentModel: React.FC<WaterContentModelProps> = ({
       <main style={{ marginTop: '45px' }}>
 
         {/* Seção de temperatura de secagem */}
-        <div style={{ marginTop: '4%', height: '40px', textAlign: 'left' }}>
-          <div style={{ display: 'inline-block', paddingRight: '2px' }}>
-            <p style={{ fontSize: '13px' }}>Temperatura de secagem:</p>
+        <div style={{ marginTop: '4%', height: '60px', textAlign: 'left', display: 'flex', alignItems: 'center' }}>
+          <div style={{ marginRight: '20px', minWidth: '180px' }}>
+            <p style={{ fontSize: '13px', margin: 0 }}>Temperatura de secagem:</p>
           </div>
-          <div style={{ 
-            display: 'inline-block', 
-            fontSize: '13px', 
-            marginLeft: '10px',
-            marginRight: '5px' 
-          }}>
-            <input 
-              type="checkbox" 
-              className="checkbox"
-              checked={dataRehearsal.Temp_CheckBox1 === "P1"}
-              readOnly
-            />
-            <span>105ºC ± 5ºC (P1)</span>
-          </div>
-          <div style={{ 
-            display: 'inline-block', 
-            fontSize: '13px', 
-            marginLeft: '10px' 
-          }}>
-            <input 
-              type="checkbox" 
-              className="checkbox"
-              checked={dataRehearsal.Temp_CheckBox2 === "P2"}
-              readOnly
-            />
-            <span>60ºC ± 5ºC (P2)</span>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <div style={{ 
+              fontSize: '13px', 
+              marginBottom: '5px',
+              display: 'flex',
+              alignItems: 'center'
+            }}>
+              <input 
+                type="checkbox" 
+                className="checkbox"
+                checked={dataRehearsal.Temp_CheckBox1 === "P1"}
+                readOnly
+                style={{ marginRight: '8px' }}
+              />
+              <span>105ºC ± 5ºC (P1)</span>
+            </div>
+            <div style={{ 
+              fontSize: '13px',
+              display: 'flex',
+              alignItems: 'center'
+            }}>
+              <input 
+                type="checkbox" 
+                className="checkbox"
+                checked={dataRehearsal.Temp_CheckBox2 === "P2"}
+                readOnly
+                style={{ marginRight: '8px' }}
+              />
+              <span>60ºC ± 5ºC (P2)</span>
+            </div>
           </div>
         </div>
 
