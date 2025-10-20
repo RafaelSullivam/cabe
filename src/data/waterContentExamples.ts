@@ -67,7 +67,7 @@ export const exemploWaterContentProps: WaterContentModelProps = {
   dataRehearsal: exemploWaterContentData,
   codSample: "AM-001", 
   numberSample: "001",
-  observation: "Amostra coletada em condições normais de umidade. Solo argiloso de coloração marrom avermelhada.",
+  observation: "",
   pagina: 1,
   totalPaginas: 1,
   logo: "", // Base64 do logo seria inserido aqui

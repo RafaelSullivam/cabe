@@ -197,29 +197,7 @@ const WaterContentModel: React.FC<WaterContentModelProps> = ({
               </td>
             </tr>
             {/* Linha de Observações */}
-            <tr>
-              <td className="tg-0pky" colSpan={15} style={{ paddingRight: '10px', marginTop: '0px' }}>
-                <p className="title">Observação:</p>
-                <div style={{ height: '15px' }}>
-                  {observation || '- Os resultados referem-se somente às amostras ensaiadas.\n- A incerteza expandida foi determinada multiplicando-se a incerteza padrão combinada pelo fator de expansão k=2, que para uma distribuição normal corresponde a uma probabilidade de abrangência de aproximadamente 95%.\n- Este relatório só pode ser reproduzido na sua totalidade.'}
-                </div>
-              </td>
-            </tr>
-
-            {/* Linha final: Código laboratório, Data de Emissão e Paginação */}
-            <tr>
-              <td className="tg-0pky" colSpan={15} style={{ padding: '4px 0px 0px 5px' }}>
-                <div style={{ width: '245px', display: 'inline-block' }}>
-                  <p className="title">Código laboratório: PP-LB-008-02</p>
-                </div>
-                <div style={{ width: '447px', display: 'inline-block' }}>
-                  <p className="title">DATA EMISSÃO: {dataFormatada}</p>
-                </div>
-                <div style={{ display: 'inline-block' }}>
-                  <p className="title">Pág: {pagina}/{totalPaginas}</p>
-                </div>
-              </td>
-            </tr>
+          
           </tbody>
         </table>
 
@@ -232,7 +210,7 @@ const WaterContentModel: React.FC<WaterContentModelProps> = ({
         pagina={pagina}
         totalPaginas={totalPaginas}
         dataEmissao={new Date().toLocaleDateString('pt-BR')}
-        observation={observation || ''}
+
       />
     </div>
   );
