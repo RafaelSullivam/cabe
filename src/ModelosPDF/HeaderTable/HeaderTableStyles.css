@@ -153,15 +153,15 @@ header {
 .abnt-logo-container {
   position: absolute;
   top: 50px;
-  right: 525px;
+  right: 553px;
   z-index: 10;
 }
 
 .abnt-logo {
   display: block;
-  width: 160px;
-  height: 120px;
-  object-fit: contain;
+ /*  object-fit: contain; */
+  max-width: none;
+  max-height: none;
 }
 
 /* Estilos para impressão */
@@ -176,20 +176,25 @@ header {
   /* Imagem ABNT na impressão - ajustado para ficar igual à tela */
   .abnt-logo-container {
     position: absolute !important;
-    top: 45px !important;
-    right: 570px !important;
+    top: 50px !important;
+    right: 553px !important;
     z-index: 10 !important;
   }
 
   .abnt-logo {
     display: block !important;
-    width: 160px !important;
-    height: 110px !important;
-    object-fit: contain !important;
-    max-width: 160px !important;
-    max-height: 110px !important;
+    /* object-fit: contain !important; */
+    max-width: none !important;
+    max-height: none !important;
   }
-
+.tg-cabecalho {
+  border-collapse: collapse;
+  border-spacing: 0;
+ margin-right: -10%;
+  width: 105%;
+  margin-bottom: 25px;
+  direction: rtl;
+}
   /* Estilo para DATA DE CONCLUSÃO na impressão */
   .tg-cabecalho-data-conclusao {
     width: 100px !important;
@@ -204,12 +209,12 @@ header {
   }
 
   /* Estilo para célula CLIENTE na impressão */
-  .tg-cabecalho-cliente {
-    width: 130px !important;
-    min-width: 130px !important;
-    text-align: center !important;
-    vertical-align: middle !important;
-  }
+ .tg-cabecalho-cliente {
+  width: 118px !important;
+  min-width: 118px !important;
+  height: 65px !important;
+  vertical-align: top !important;
+}
 
   /* Garante que elementos posicionados absolutamente sejam impressos */
   * {

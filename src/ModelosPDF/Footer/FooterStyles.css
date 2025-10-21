@@ -6,6 +6,7 @@
   background: #fff;
   text-align: center;
   margin-top: 10px;
+  margin-left: -10px; /* Move footer para a esquerda */
 }
 
 .footer-geocontrole p {
@@ -49,6 +50,74 @@
   vertical-align: top;
 }
 
+/* Estilos para informações da empresa */
+.footer-empresa-info {
+  text-align: center;
+}
+
+.footer-empresa-texto {
+  font-size: 10px;
+  font-weight: bold;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #000; /* Texto preto para visibilidade */
+}
+
+.footer-empresa-container {
+  display: block;
+  text-align: center;
+  margin: 5px 0;
+}
+
+.footer-empresa-item {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+.footer-empresa-email {
+  width: 100%;
+  background-color: green;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 2px 10px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+/* Estilos para código laboratório, data emissão e paginação */
+.codLab {
+  padding: 4px 0px 0px 5px;
+}
+
+.footer-info-horizontal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-info-item {
+  flex: 1;
+  text-align: center;
+}
+
+.footer-info-item-codigo {
+  flex: 0 0 245px;
+  text-align: left;
+}
+
+.footer-info-item-data {
+  flex: 0 0 447px;
+  text-align: center;
+}
+
+.footer-info-item-pag {
+  flex: 0 0 auto;
+  text-align: right;
+}
+
 .footer-geocontrole .tg .tg-0pky .title {
   font-size: 0.6rem;
   font-weight: bold;
@@ -60,20 +129,97 @@
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
+
+ /* padding: 5px;
+  border-color: inherit;
+  text-align: left; */
 /* ////////////////////////////////////////////////////////////////////// */
 /* Estilos para impressão */
 @media print {
   .footer-geocontrole {
     position: static;
     margin-top: 20px;
+    margin-left: -90px !important; /* Move footer para a esquerda na impressão */
     background: #fff !important;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
+    width: 117% !important; /* Mantém largura total do footer */
   }
 
-  .footer-geocontrole div {
+  /* Tabela principal do footer - mantém largura */
+  .footer-geocontrole .tg.tg-cabecalho {
+    width: 117% !important;
+    margin-bottom: 0px !important;
+    border-collapse: collapse !important;
+  }
+
+  /* Estilos de impressão para informações da empresa */
+  .footer-empresa-info {
+    text-align: center !important;
+    margin-top: 20px !important;
+  }
+
+  .footer-empresa-texto {
+    font-size: 10px !important;
+    font-weight: bold !important;
+    margin: 0 !important;
+    font-family: Arial, sans-serif !important;
+    color: #000 !important; /* Texto preto para ser visível */
+  }
+
+  .footer-empresa-container {
+    display: block !important;
+    text-align: center !important;
+    margin: 5px 0 !important;
+  }
+
+  .footer-empresa-item {
+    width: 100% !important;
+    text-align: center !important;
+    margin-bottom: 2px !important;
+  }
+
+  /* Estilos de impressão para layout horizontal do footer */
+  .codLab {
+    padding: 4px 0px 0px 5px !important;
+  }
+
+  .footer-info-horizontal {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  .footer-info-item {
+    flex: 1 !important;
+    text-align: center !important;
+  }
+
+  .footer-info-item-codigo {
+    flex: 0 0 245px !important;
+    text-align: left !important;
+  }
+
+  .footer-info-item-data {
+    flex: 0 0 200px !important;
+    text-align: center !important;
+  }
+
+  .footer-info-item-pag {
+    flex: 5 0 auto !important;
+    text-align: right !important;
+  }
+
+  .footer-empresa-email {
+    width: 100% !important;
     background-color: green !important;
     color: #fff !important;
+    font-family: Arial, sans-serif !important;
+    padding: 2px 10px !important;
+    text-align: center !important;
+    font-size: 10px !important;
+    font-weight: bold !important;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }

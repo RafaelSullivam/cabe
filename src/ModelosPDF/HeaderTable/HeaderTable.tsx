@@ -34,7 +34,7 @@ const HeaderTable: React.FC<HeaderTableProps> = ({
     <div style={{ position: 'relative',marginLeft:'-10px',marginTop:'-20px' }}>
       {/* Imagem ABNT posicionada fora da tabela */}
       <div className="abnt-logo-container">
-        <img src="images/ABNT.png" width="120px" height="120px" alt="ABNT" className="abnt-logo" />
+        <img src="images/ABNT.png" width="100px" height="120px" alt="ABNT" className="abnt-logo" />
       </div>
       
       <table className="tg-cabecalho">
@@ -63,7 +63,7 @@ const HeaderTable: React.FC<HeaderTableProps> = ({
               </div>
             </th>
 
-            <th className="tg-cabecalho-cliente" style={{ width: '105px' }} colSpan={1} rowSpan={2}>
+            <th className="tg-cabecalho-cliente" colSpan={1} rowSpan={2}>
               CLIENTE:
               <br />
               {logoElement}

@@ -80,14 +80,14 @@ const WaterContentModel: React.FC<WaterContentModelProps> = ({
                   marginTop: '10px',
                   borderLeft: 'none', 
                   borderRight: 'none', 
-                  borderTopColor: '#fff',
+                  borderColor: '#fff',
                   paddingLeft: '0px',
                   paddingRight: '0px',
                   height: '605px'
                 }}
               >
                 {/* Tabela de dados das cápsulas */}
-                <table className="tg-tabela-de-capsula" style={{ marginTop: '0px', width: '100%' }}>
+                <table className="tg-tabela-de-capsula">
                   <colgroup>
                     <col style={{ width: '252.2px' }} />
                     <col style={{ width: '42.2px' }} />

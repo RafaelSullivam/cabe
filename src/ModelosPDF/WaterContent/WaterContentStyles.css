@@ -58,10 +58,7 @@
   text-align: left;
 }
 
-.water-content-model .tg-0pky p {
-  margin-top: 2px;
-  vertical-align: top;
-}
+
 
 .water-content-model .tg .tg-0pky .title {
   font-size: 0.6rem;
@@ -76,7 +73,7 @@
 }
 
 
-.water-content-model .tg-cabecalho td,
+/* .water-content-model .tg-cabecalho td,
 .water-content-model .tg-cabecalho th {
   border-color: black;
   border-style: solid;
@@ -86,7 +83,7 @@
   overflow: hidden;
   padding: 2px 5px;
   word-break: normal;
-}
+} */
 
 .water-content-model .tg-cabecalho th {
   font-weight: normal;
@@ -122,6 +119,10 @@
   border-collapse: collapse;
   border-spacing: 0;
   margin: 0px auto;
+  /* Configuração para web */
+  margin-top: 0px;
+  width: 110%;
+  margin-left: -30px;
 }
 
 .water-content-model .hr-ass {
@@ -243,4 +244,25 @@
   font-size: 10px;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
+}
+
+@media print {
+  /* Configuração específica para impressão da tabela de cápsulas */
+  .water-content-model .tg-tabela-de-capsula {
+    margin-top: 0px !important;
+    width: 131% !important;
+    margin-left: -90px !important;
+    border-collapse: collapse !important;
+    border-spacing: 0 !important;
+  }
+
+  /* Garantir que as cores e bordas sejam preservadas na impressão */
+  .water-content-model .tg-tabela-de-capsula td,
+  .water-content-model .tg-tabela-de-capsula th {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    border-color: black !important;
+    border-style: solid !important;
+    border-width: 1px !important;
+  }
 }
