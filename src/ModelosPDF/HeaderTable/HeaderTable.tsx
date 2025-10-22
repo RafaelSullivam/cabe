@@ -31,7 +31,7 @@ const HeaderTable: React.FC<HeaderTableProps> = ({
   ) : null
 
   return (
-    <div style={{ position: 'relative',marginLeft:'-10px',marginTop:'-20px' }}>
+    <div style={{ position: 'relative',marginLeft:'-20px',marginTop:'-20px' }}>
       {/* Imagem ABNT posicionada fora da tabela */}
       <div className="abnt-logo-container">
         <img src="images/ABNT.png" width="100px" height="120px" alt="ABNT" className="abnt-logo" />

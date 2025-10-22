@@ -48,7 +48,11 @@
 /* Print styles */
 @media print {
   @page {
-    margin: 0.6cm 0.3cm 0.1cm 0.1cm;
+      margin-left: 0.6cm;
+  margin-right: 0.3cm;
+  margin-top: 0.1cm;
+  margin-bottom: -100cm; /* Sem margem inferior */
+  size: A4;
   }
 
   body {

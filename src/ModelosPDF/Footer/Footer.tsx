@@ -31,7 +31,7 @@ const Footer: React.FC<FooterProps> = ({
         <tbody>
           {/* Linha de Observação */}
           <tr>
-            <td className="tg-0pky" colSpan={15} style={{ paddingRight: '10px', marginTop: '10px' }}>
+            <td className="tg-0pky" colSpan={15} style={{ paddingRight: '10px', marginTop: '50px' }}>
               <p className="title">Observação:</p>
               <div style={{ height: '15px' }}>
                 {observation || ''}

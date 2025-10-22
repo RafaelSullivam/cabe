@@ -181,7 +181,7 @@ const WaterContentModel: React.FC<WaterContentModelProps> = ({
                 </div>
 
                 {/* Tabela de incertezas */}
-                <table className="tg-tabela-de-capsula-2" style={{ width: '100%', marginTop: '5px' }}>
+                <table className="tg-tabela-de-capsula-2">
                   <tbody>
                     <tr style={{ marginTop: '5px', height: '4px' }}>
                       <td className="tg-tabela-de-capsula-0r18" style={{ textAlign: 'left', width: '442.2px' }}>

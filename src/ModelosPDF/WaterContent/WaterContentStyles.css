@@ -9,13 +9,6 @@
   font-family: Arial, sans-serif;
 }
 
-@page {
-  margin-left: 0.6cm;
-  margin-right: 0.3cm;
-  margin-top: 0.1cm;
-  margin-bottom: 0.1cm;
-}
-
 .water-content-model header {
   position: fixed;
   top: 0cm;
@@ -150,7 +143,10 @@
   border-collapse: collapse;
   border-spacing: 0;
   margin: 0px auto;
-  width: 100%;
+  /* Configuração para web */
+  width: 110%;
+  margin-top: 5px;
+  margin-left: -30px;
 }
 
 .water-content-model .tg-tabela-de-capsula-2 td,
@@ -259,6 +255,25 @@
   /* Garantir que as cores e bordas sejam preservadas na impressão */
   .water-content-model .tg-tabela-de-capsula td,
   .water-content-model .tg-tabela-de-capsula th {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    border-color: black !important;
+    border-style: solid !important;
+    border-width: 1px !important;
+  }
+
+  /* Configuração específica para impressão da tabela de incertezas */
+  .water-content-model .tg-tabela-de-capsula-2 {
+    width: 131% !important;
+    margin-top: 5px !important;
+    margin-left: -90px !important;
+    border-collapse: collapse !important;
+    border-spacing: 0 !important;
+  }
+
+  /* Garantir que as cores e bordas da tabela de incertezas sejam preservadas */
+  .water-content-model .tg-tabela-de-capsula-2 td,
+  .water-content-model .tg-tabela-de-capsula-2 th {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
     border-color: black !important;

@@ -4,13 +4,6 @@ body {
   margin-top: 1.2cm;
 }
 
-@page {
-  margin-left: 0.6cm;
-  margin-right: 0.3cm;
-  margin-top: 0.1cm;
-  margin-bottom: 0.1cm;
-}
-
 header {
   position: fixed;
   top: -10cm;
@@ -24,7 +17,7 @@ header {
   border-collapse: collapse;
   border-spacing: 0;
  margin-right: -10%;
-  width: 105%;
+  width: 110%;
   margin-bottom: 25px;
   direction: rtl;
 }
@@ -88,7 +81,7 @@ header {
 
 /* Estilo específico para o campo DATA DE CONCLUSÃO */
 .tg-cabecalho-data-conclusao {
-  width: 100px !important;
+  width: 120px !important;
   max-width: 120px !important;
   min-height: 60px !important;
   white-space: normal !important;
@@ -152,9 +145,12 @@ header {
 /* Container da imagem ABNT */
 .abnt-logo-container {
   position: absolute;
-  top: 50px;
+  top: 45px;
   right: 553px;
   z-index: 10;
+  border: 1px solid black;
+  padding: 2px;
+  width: 110px; /* Ajuste este valor para aumentar ou diminuir */
 }
 
 .abnt-logo {
@@ -177,8 +173,11 @@ header {
   .abnt-logo-container {
     position: absolute !important;
     top: 50px !important;
-    right: 553px !important;
+    right: 525px !important;
     z-index: 10 !important;
+    border: 1px solid black;
+  padding: 2px;
+  width: 109px; 
   }
 
   .abnt-logo {
@@ -190,16 +189,16 @@ header {
 .tg-cabecalho {
   border-collapse: collapse;
   border-spacing: 0;
- margin-right: -10%;
-  width: 105%;
+  margin-left: -12%;
+  width: 132%;
   margin-bottom: 25px;
   direction: rtl;
 }
   /* Estilo para DATA DE CONCLUSÃO na impressão */
   .tg-cabecalho-data-conclusao {
-    width: 100px !important;
+    width: 108px !important;
     max-width: 120px !important;
-    min-height: 60px !important;
+    min-height: 90px !important;
     white-space: normal !important;
     word-wrap: break-word !important;
     overflow-wrap: break-word !important;

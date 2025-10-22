@@ -6,6 +6,7 @@ import PrintMenu from './PrintMenu'
 import { exemploWaterContentProps } from '../data/waterContentExamples'
 import { exemploSandModelProps } from '../data/sandModelExamples'
 import './RelatorioSequencialStyles.css'
+import '../ModelosPDF/GlobalPDFStyles.css' // Estilos globais para todos os modelos PDF
 
 const opcoesDisponiveis = [
   'Teor de umidade',

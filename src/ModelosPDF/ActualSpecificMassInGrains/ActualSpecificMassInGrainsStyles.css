@@ -4,13 +4,6 @@ body {
   margin-top: 1.2cm;
 }
 
-@page {
-  margin-left: 0.6cm;
-  margin-right: 0.3cm;
-  margin-top: 0.1cm;
-  margin-bottom: 0.1cm;
-}
-
 /* Tabela principal */
 .tg-main-table {
   border-collapse: collapse;
