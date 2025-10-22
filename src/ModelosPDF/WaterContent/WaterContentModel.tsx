@@ -12,7 +12,6 @@ const WaterContentModel: React.FC<WaterContentModelProps> = ({
   pagina,
   totalPaginas,
   logo,
-  dataFormatada,
   signatures
 }) => {
 
@@ -59,9 +58,9 @@ const WaterContentModel: React.FC<WaterContentModelProps> = ({
 
         {/* Tabela principal .tg - estrutura igual ao PHP */}
         <table className="water-table">
-      
+          <tbody>
             {/* Linha 1: Contém todas as tabelas de dados (cápsulas + incertezas) */}
-          
+            <tr>
               <td 
                 className="tg-0pky main-content-cell" 
                 colSpan={15}
@@ -173,10 +172,9 @@ const WaterContentModel: React.FC<WaterContentModelProps> = ({
                   </tbody>
                 </table>
               </td>
-           
-            {/* Linha de Observações */}
-          
-      
+            </tr>
+            {/* Linha de Observações pode ser adicionada aqui se necessário */}
+          </tbody>
         </table>
 
       </main>
@@ -187,8 +185,8 @@ const WaterContentModel: React.FC<WaterContentModelProps> = ({
         executado={dataRehearsal.Executado}
         pagina={pagina}
         totalPaginas={totalPaginas}
+        observation={observation || ''}
         dataEmissao={new Date().toLocaleDateString('pt-BR')}
-
       />
     </div>
   );

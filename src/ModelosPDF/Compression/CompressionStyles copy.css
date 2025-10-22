@@ -1,0 +1,245 @@
+/* CompressionModel Styles - Ensaio de Compactação (Proctor) */
+
+body {
+  margin-top: 1.2cm;
+}
+
+.compression-container {
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+}
+
+/* Checkbox Styles */
+.checkbox {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.checkbox input[type="checkbox"] {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.checkbox label {
+  font-size: 10px;
+  vertical-align: middle;
+}
+
+/* Compression Table Styles */
+.tg-compression {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.tg-compression td {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+  padding: 8px 5px;
+  word-break: normal;
+}
+
+.tg-compression th {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  overflow: hidden;
+  padding: 10px 5px;
+}
+
+.tg-compression .tg-compression-7wru {
+  border-color: inherit;
+  text-align: left;
+  font-size: xx-small;
+  font-weight: normal !important;
+  vertical-align: middle !important;
+}
+
+.tg-compression .tg-compression-p1nr {
+  border-color: inherit;
+  text-align: left;
+  font-size: 11px;
+  vertical-align: middle !important;
+}
+
+.tg-compression .tg-compression-78ff {
+  border-color: inherit;
+  font-size: xx-small;
+  text-align: center;
+  vertical-align: middle !important;
+  white-space: nowrap;
+}
+
+.tg-compression .tg-compression-fmch {
+  background-color: #c0c0c0;
+  border-color: inherit;
+  font-size: 11px;
+  text-align: center;
+  vertical-align: middle !important;
+}
+
+.tg-compression .tg-compression-gzo9 {
+  border-color: inherit;
+  font-size: 11px;
+  text-align: center;
+  vertical-align: middle !important;
+}
+
+.tg-compression .tg-compression-25da {
+  border-color: inherit;
+  font-size: x-small;
+  text-align: center;
+  vertical-align: middle !important;
+}
+
+.tg-compression .tg-compression-6rs4 {
+  border-color: inherit;
+  font-size: xx-small;
+  font-weight: normal !important;
+  text-align: center;
+  vertical-align: middle !important;
+}
+
+.tg-compression .tg-compression-4nn5 {
+  background-color: #c0c0c0;
+  border-color: inherit;
+  font-size: xx-small;
+  font-weight: bold !important;
+  text-align: center;
+  vertical-align: middle !important;
+}
+
+.tg-compression-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Responsive */
+@media screen and (max-width: 767px) {
+  .tg-compression {
+    width: auto !important;
+  }
+  .tg-compression col {
+    width: auto !important;
+  }
+}
+
+/* Header styles inherited from parent */
+.compression-container header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: white;
+  z-index: 100;
+}
+
+.compression-container .header-logo {
+  flex: 1;
+}
+
+.compression-container .header-amostra {
+  flex: 1;
+  text-align: right;
+}
+
+.compression-container .amostra-box {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 5px 15px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Cabeçalho Table */
+.tg-cabecalho {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.tg-cabecalho td,
+.tg-cabecalho th {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+
+.tg-cabecalho .tg-cabecalho-0pky {
+  border-color: inherit;
+  text-align: left;
+  vertical-align: top;
+}
+
+.tg-cabecalho .tg-cabecalho-p1nr {
+  border-color: inherit;
+  font-size: 11px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.tg-cabecalho .tg-cabecalho-ps66 {
+  border-color: inherit;
+  font-size: 11px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.tg-cabecalho .col-1 {
+  width: 25%;
+}
+
+.tg-cabecalho .col-2 {
+  width: 25%;
+}
+
+.tg-cabecalho .col-3 {
+  width: 50%;
+}
+
+.tg-cabecalho .cabecalho-resultado-font {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+/* Main table */
+.tg {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.tg td,
+.tg th {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+
+.tg .tg-0pky {
+  border-color: inherit;
+  text-align: left;
+  vertical-align: top;
+}

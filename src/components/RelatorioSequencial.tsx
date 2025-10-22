@@ -1,10 +1,14 @@
 import React, { useState } from 'react'
 import WaterContentModel from '../ModelosPDF/WaterContent/WaterContentModel'
 import DetermineMaximumAndMinimumSandModel from '../ModelosPDF/DetermineMaximumAndMinimumSand/DetermineMaximumAndMinimumSandModel'
+import CompressionModel from '../ModelosPDF/Compression/CompressionModel'
+import ActualSpecificMassInGrainsModel from '../ModelosPDF/ActualSpecificMassInGrains/ActualSpecificMassInGrainsModel'
 import A4Container from './A4Container'
 import PrintMenu from './PrintMenu'
 import { exemploWaterContentProps } from '../data/waterContentExamples'
 import { exemploSandModelProps } from '../data/sandModelExamples'
+import { exemploCompressionProps } from '../data/compressionExamples'
+import { actualSpecificMassInGrainsExample } from '../data/actualSpecificMassInGrainsExamples'
 import './RelatorioSequencialStyles.css'
 import '../ModelosPDF/GlobalPDFStyles.css' // Estilos globais para todos os modelos PDF
 
@@ -70,11 +74,13 @@ const RelatorioSequencial: React.FC<RelatorioSequencialProps> = ({ onBackToSelec
       const ensaiosSelecionados = formData.relatoriosSelecionados
       const temTeorUmidade = ensaiosSelecionados.includes('Teor de umidade')
       const temMassaEspecifica = ensaiosSelecionados.includes('Massa específica máxima e mínima de areias')
+      const temCompactacao = ensaiosSelecionados.includes('Compactação')
+      const temMassaEspecificaGraos = ensaiosSelecionados.includes('Massa específica real dos grãos')
       
       // Simular processamento
       await new Promise(resolve => setTimeout(resolve, 1000))
       
-      if (temTeorUmidade || temMassaEspecifica) {
+      if (temTeorUmidade || temMassaEspecifica || temCompactacao || temMassaEspecificaGraos) {
         setSelectedModelToView('combined-models')
         setIsLoading(false)
         return
@@ -113,11 +119,15 @@ const RelatorioSequencial: React.FC<RelatorioSequencialProps> = ({ onBackToSelec
     const ensaiosSelecionados = formData.relatoriosSelecionados
     const temTeorUmidade = ensaiosSelecionados.includes('Teor de umidade')
     const temMassaEspecifica = ensaiosSelecionados.includes('Massa específica máxima e mínima de areias')
+    const temCompactacao = ensaiosSelecionados.includes('Compactação')
+    const temMassaEspecificaGraos = ensaiosSelecionados.includes('Massa específica real dos grãos')
     
     // Calcular total de páginas
     let totalPaginas = 0
     if (temTeorUmidade) totalPaginas += 1 // WaterContent = 1 página
-    if (temMassaEspecifica) totalPaginas += 1 // SandModel = 1 página (assumindo)
+    if (temMassaEspecifica) totalPaginas += 1 // SandModel = 1 página
+    if (temCompactacao) totalPaginas += 1 // CompressionModel = 1 página
+    if (temMassaEspecificaGraos) totalPaginas += 1 // ActualSpecificMassInGrainsModel = 1 página
     
     let paginaAtual = 1
     const models = []
@@ -148,6 +158,65 @@ const RelatorioSequencial: React.FC<RelatorioSequencialProps> = ({ onBackToSelec
               data={exemploSandModelProps} 
               pagina={paginaAtual}
               totalPaginas={totalPaginas}
+            />
+          </A4Container>
+        </div>
+      )
+      paginaAtual++
+    }
+
+    if (temCompactacao) {
+      models.push(
+        <div key="compression-model" className="model-page">
+          <A4Container darkMode={darkMode}>
+            <CompressionModel 
+              dataHeaderAndFooter={exemploCompressionProps.dataHeaderAndFooter}
+              example={exemploCompressionProps.example}
+              pagina={paginaAtual}
+              totalPaginas={totalPaginas}
+              signatures={exemploCompressionProps.signatures}
+            />
+          </A4Container>
+        </div>
+      )
+      paginaAtual++
+    }
+
+    if (temMassaEspecificaGraos) {
+      models.push(
+        <div key="actual-specific-mass-grains-model" className="model-page">
+          <A4Container darkMode={darkMode}>
+            <ActualSpecificMassInGrainsModel 
+              logo=""
+              clienteNome="Cliente Exemplo"
+              codSample="AM-001"
+              numberSample="001"
+              normaRealGraos="ABNT NBR 6508:1984"
+              dataHeaderAndFooter={{
+                Processo: "12345.678/2024",
+                Lote: "LT-2024-001",
+                Profundidade_Inicial: "1.50",
+                Profundidade_Final: "2.00",
+                Data_Registro: "15/10/2024",
+                Sondagem: "SP-01",
+                Datum: "SIRGAS 2000",
+                Coordenada_X: "500000.00",
+                Coordenada_Y: "7500000.00",
+                Coordenada_Z: "100.50",
+                Aplicacao: "Aterro",
+                Obra: "Rodovia BR-101",
+                Especificacao_tecnica: "DNIT 164/2013-ME",
+                Localizacao: "km 45"
+              }}
+              dataRehearsal={actualSpecificMassInGrainsExample}
+              observation="Ensaio realizado conforme procedimento interno."
+              pagina={paginaAtual}
+              totalPaginas={totalPaginas}
+              dataFormatada={new Date().toLocaleDateString('pt-BR')}
+              signatures={{
+                verificador: { Nome: "Maria Santos", Assinatura: "" },
+                aprovador: { Nome: "Dr. Pedro Costa", Assinatura: "" }
+              }}
             />
           </A4Container>
         </div>

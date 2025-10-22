@@ -152,7 +152,15 @@
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
-
+.footer-geocontrole-table{
+  border-collapse: collapse;
+   border-color: #000;
+    border-spacing: 0;
+    margin-right: -10%;
+    width: 110%;
+    margin-bottom: 25px;
+    direction: rtl;
+}
  /* padding: 5px;
   border-color: inherit;
   text-align: left; */
@@ -170,7 +178,7 @@
   }
 
   /* Tabela principal do footer - mantém largura */
-  .footer-geocontrole .tg.tg-cabecalho {
+  .footer-geocontrole-tg {
     width: 117% !important;
     margin-bottom: 0px !important;
     border-collapse: collapse !important;

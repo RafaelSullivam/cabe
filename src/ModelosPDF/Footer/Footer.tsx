@@ -25,9 +25,9 @@ const Footer: React.FC<FooterProps> = ({
   dataEmissao
 }) => {
   return (
-    <footer className={`footer-geocontrole ${className}`}>
+    <footer className={`footer-geocontrole`}>
       {/* Seção de Assinaturas - sempre renderizada */}
-      <table className="tg tg-cabecalho" style={{ width: '105%', marginBottom: '0px', borderCollapse: 'collapse' }}>
+      <table className="tg tg-cabecalho" style={{ width: '117%', marginBottom: '0px', borderCollapse: 'collapse',marginLeft:'0px' }}>
         <tbody>
           {/* Linha de Observação */}
           <tr>

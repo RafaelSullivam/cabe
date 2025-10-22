@@ -17,7 +17,8 @@ export interface CompressionData {
   coordenadaZ: string;
   especificacaoTecnica: string;
   codigoLaboratorio: string;
-
+codSample: string;
+  numberSample: string;
   // Test metadata
   normaEnsaio: string;
   energiaCompactacao: string;
@@ -261,5 +262,15 @@ export interface CompressionData {
 }
 
 export interface CompressionProps {
-  data: CompressionData;
+  dataHeaderAndFooter: CompressionData;
+  example: CompressionData;
+  pagina?: number;
+  totalPaginas?: number;
+  codSample?: string;
+  numberSample?: string;
+  signatures?: {
+    verificador?: { Assinatura: string; Nome: string };
+    aprovador?: { Assinatura: string; Nome: string };
+    marciel?: { Assinatura: string; Nome: string };
+  };
 }
