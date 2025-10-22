@@ -58,7 +58,7 @@ const HeaderTable: React.FC<HeaderTableProps> = ({
             
             <th className="tg-cabecalho-0pky col-3" colSpan={2}>
               {relatorioTitulo}:
-              <div style={{ marginLeft: '21%', fontSize: '15px', marginTop: '-6px' }}>
+              <div style={{ marginLeft: '17%', fontSize: '13px', marginTop: '-6px' }}>
                 {relatorioSubtitulo}
               </div>
             </th>

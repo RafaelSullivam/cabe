@@ -101,7 +101,7 @@ const CompressionModel: React.FC<CompressionProps> = ({
             <HeaderTable
         clienteNome="CLIENTE"
         relatorioTitulo="RELATÓRIO ENSAIO"
-        relatorioSubtitulo="DETERMINAÇÃO DE MASSA ESPECÍFICA APARENTE - ENSAIO DE COMPACTAÇÃO"
+        relatorioSubtitulo="DETERMINAÇÃO DE MASSA ESPECÍFICA APARENTE"
         codSample={example?.codSample || ''}
         numberSample={example?.numberSample || ''}
         logo={logo}

@@ -229,18 +229,7 @@ const RelatorioSequencial: React.FC<RelatorioSequencialProps> = ({ onBackToSelec
 
   return (
     <>
-      {selectedModelToView === 'water-content' ? (
-        <>
-          <PrintMenu 
-            darkMode={darkMode} 
-            onToggleDarkMode={() => {}} 
-            onBackToSelection={handleBackToForm}
-          />
-          <A4Container darkMode={darkMode}>
-            <WaterContentModel {...exemploWaterContentProps} />
-          </A4Container>
-        </>
-      ) : selectedModelToView === 'combined-models' ? (
+      {selectedModelToView === 'combined-models' ? (
         <>
           <PrintMenu 
             darkMode={darkMode} 
