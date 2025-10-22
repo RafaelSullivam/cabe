@@ -75,6 +75,28 @@
   margin-bottom: 2px;
 }
 
+/* Layout horizontal para textos da empresa */
+.footer-empresa-horizontal {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Permite quebra natural */
+  gap: 10px; /* Espaço entre os elementos */
+}
+
+.footer-empresa-texto-left {
+  text-align: left;
+  margin: 0;
+  flex: 1; /* Ocupa espaço disponível */
+  max-width: 70%; /* Limita para dar espaço ao ISO */
+}
+
+.footer-empresa-texto-right {
+  text-align: right;
+  margin: 0;
+  flex-shrink: 0; /* Não encolhe */
+  white-space: nowrap; /* Mantém ISO numa linha */
+}
+
 .footer-empresa-email {
   width: 100%;
   background-color: green;
@@ -180,11 +202,40 @@
   }
 
   .footer-empresa-item {
-    width: 100% !important;
+    width: 117% !important;
     text-align: center !important;
-    margin-bottom: 2px !important; /* Espaço entre linhas */
+    margin-bottom: 2px !important;
     line-height: 1.2 !important;
     padding: 0 !important;
+  }
+
+  /* Alinhamento horizontal na impressão */
+  .footer-empresa-horizontal {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important; /* Permite quebra natural */
+    gap: 1px !important;
+  }
+
+  .footer-empresa-texto-left {
+    text-align: left !important;
+    margin: 0 !important;
+    flex: 1 !important;
+    max-width: 70% !important;
+  }
+
+  .footer-empresa-texto-right {
+    text-align: right !important;
+    margin: 0 !important;
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+  }
+
+  /* Remove estilo anterior */
+  .footer-empresa-item div {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
   }
 
   /* Estilos de impressão para layout horizontal do footer */

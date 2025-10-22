@@ -15,14 +15,14 @@ interface FooterProps {
   dataEmissao?: string;
 }
 
-const Footer: React.FC<FooterProps> = ({ 
-  className = '', 
-  signatures, 
-  executado, 
-   observation,
-  pagina, 
-  totalPaginas, 
-  dataEmissao 
+const Footer: React.FC<FooterProps> = ({
+  className = '',
+  signatures,
+  executado,
+  observation,
+  pagina,
+  totalPaginas,
+  dataEmissao
 }) => {
   return (
     <footer className={`footer-geocontrole ${className}`}>
@@ -38,7 +38,7 @@ const Footer: React.FC<FooterProps> = ({
               </div>
             </td>
           </tr>
-          
+
           {/* Linha de Assinaturas */}
           <tr>
             <td className="tg-0pky" colSpan={5}>
@@ -49,7 +49,7 @@ const Footer: React.FC<FooterProps> = ({
               <p className="title" style={{ top: 0 }}>Verificação:</p>
               {signatures?.verificador ? (
                 <>
-                  <img 
+                  <img
                     style={{ margin: '1px 0px 0px 50px' }}
                     src={`data:image/jpeg;base64,${signatures.verificador.Assinatura}`}
                     alt="Assinatura Verificador"
@@ -75,7 +75,7 @@ const Footer: React.FC<FooterProps> = ({
                   <tbody>
                     <tr style={{ border: 'none' }}>
                       <td style={{ textAlign: 'center', border: 'none' }}>
-                        <img 
+                        <img
                           src={`data:image/jpeg;base64,${signatures.aprovador.Assinatura}`}
                           alt="Assinatura Aprovador"
                           height="20px"
@@ -87,7 +87,7 @@ const Footer: React.FC<FooterProps> = ({
                         </p>
                       </td>
                       <td style={{ textAlign: 'center', border: 'none' }}>
-                        <img 
+                        <img
                           src={`data:image/jpeg;base64,${signatures.marciel.Assinatura}`}
                           alt="Assinatura Marciel"
                           height="20px"
@@ -107,7 +107,7 @@ const Footer: React.FC<FooterProps> = ({
               )}
             </td>
           </tr>
-          
+
           {/* Linha com Código laboratório, Data emissão e Paginação */}
           <tr>
             <td className="codLab" colSpan={15}>
@@ -131,17 +131,27 @@ const Footer: React.FC<FooterProps> = ({
       <div className="footer-empresa-info">
         <div className="footer-empresa-container">
           <div className="footer-empresa-item">
-            <p className="footer-empresa-texto">
-              Este relatório de ensaio só pode ser copiado integralmente ou parcialmente com autorização da Geocontrole
-            </p>
+            <div className="footer-empresa-horizontal">
+              <p className="footer-empresa-texto">
+                Este relatório de ensaio só pode ser copiado integralmente ou parcialmente com autorização da Geocontrole
+              </p>
+              <p className="footer-empresa-texto-right">
+                ISO 9001  ISO 17025
+              </p>
+            </div>
           </div>
           <div className="footer-empresa-item">
-            <p className="footer-empresa-texto">
-              Av.Canadá, Nº 159 - Jardim Canadá Nova Lima - Minas Gerais - Brasil - CEP: 34007-654 Tel.: +55 31 3517-9011
-            </p>
+            <div className="footer-empresa-horizontal">
+              <p className="footer-empresa-texto">
+                Av.Canadá, Nº 159 - Jardim Canadá Nova Lima - Minas Gerais - Brasil - CEP: 34007-654 Tel.: +55 31 3517-9011
+              </p>
+              <p className="footer-empresa-texto-right">
+                ISO 9001  ISO 17025
+              </p>
+            </div>
           </div>
         </div>
-        
+
         {/* Linha verde com site/email */}
         <div className="footer-empresa-email">
           www.geocontrole.com - e-mail: mail.br@geocontrole.com

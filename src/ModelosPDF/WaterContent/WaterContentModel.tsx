@@ -28,87 +28,67 @@ const WaterContentModel: React.FC<WaterContentModelProps> = ({
         numberSample={numberSample}
       />
 
-      <main style={{ marginTop: '20px',width: '100%' }}>
+      <main className="water-content-main">
 
         {/* Seção de temperatura de secagem */}
-        <div style={{ marginTop: '0%', height: '60px', textAlign: 'left', display: 'flex', alignItems: 'center' }}>
-          <div style={{ marginRight: '20px', minWidth: '180px' }}>
-            <p style={{ fontSize: '13px', margin: 0 }}>Temperatura de secagem:</p>
+        <div className="temperature-section">
+          <div className="temperature-label">
+            <p>Temperatura de secagem:</p>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <div style={{ 
-              fontSize: '13px', 
-              marginBottom: '5px',
-              display: 'flex',
-              alignItems: 'center'
-            }}>
+          <div className="temperature-options">
+            <div className="temperature-option">
               <input 
                 type="checkbox" 
-                className="checkbox"
+                className="checkbox temperature-checkbox"
                 checked={dataRehearsal.Temp_CheckBox1 === "P1"}
                 readOnly
-                style={{ marginRight: '8px' }}
               />
-              <span>105ºC ± 5ºC (P1)</span>
+              <span>105ºC ± 5ºC</span>
             </div>
-            <div style={{ 
-              fontSize: '13px',
-              display: 'flex',
-              alignItems: 'center'
-            }}>
+            <div className="temperature-option">
               <input 
                 type="checkbox" 
-                className="checkbox"
+                className="checkbox temperature-checkbox"
                 checked={dataRehearsal.Temp_CheckBox2 === "P2"}
                 readOnly
-                style={{ marginRight: '8px' }}
               />
-              <span>60ºC ± 5ºC (P2)</span>
+              <span>60ºC ± 5ºC</span>
             </div>
           </div>
         </div>
 
         {/* Tabela principal .tg - estrutura igual ao PHP */}
-        <table className="tg" style={{ paddingRight: '10px',color: '#000' }}>
+        <table className="water-table">
       
             {/* Linha 1: Contém todas as tabelas de dados (cápsulas + incertezas) */}
           
               <td 
-                className="tg-0pky" 
-                colSpan={15} 
-                style={{ 
-                  marginTop: '10px',
-                  borderLeft: 'none', 
-                  borderRight: 'none', 
-                  borderColor: '#fff',
-                  paddingLeft: '0px',
-                  paddingRight: '0px',
-                  height: '605px'
-                }}
+                className="tg-0pky main-content-cell" 
+                colSpan={15}
               >
                 {/* Tabela de dados das cápsulas */}
-                <table className="tg-tabela-de-capsula">
+                <table className="tg-tabela-de-capsula water-table-inner">
                   <colgroup>
-                    <col style={{ width: '252.2px' }} />
-                    <col style={{ width: '42.2px' }} />
-                    <col style={{ width: '54.2px' }} />
-                    <col style={{ width: '54.2px' }} />
-                    <col style={{ width: '54.2px' }} />
-                    <col style={{ width: '54.2px' }} />
+                    <col className="col-capsula" />
+                    <col className="col-num1" />
+                    <col className="col-num2" />
+                    <col className="col-num3" />
+                    <col className="col-num4" />
+                    <col className="col-num5" />
                   </colgroup>
                   <thead>
                     <tr>
-                      <td className="tg-tabela-de-capsula-0r18" style={{ textAlign: 'left' }}>Cápsula</td>
+                      <td className="tg-tabela-de-capsula-0r18 cell-left">Cápsula</td>
                       <td className="tg-tabela-de-capsula-0r18">Nº</td>
-                      <td className="tg-tabela-de-capsula-0r18" style={{ width: '50px' }}>{dataRehearsal.Capsula1}</td>
-                      <td className="tg-tabela-de-capsula-0r18" style={{ width: '50px' }}>{dataRehearsal.Capsula2}</td>
-                      <td className="tg-tabela-de-capsula-0r18" style={{ width: '50px' }}>{dataRehearsal.Capsula3}</td>
-                      <td className="tg-tabela-de-capsula-0r18" style={{ width: '50px' }}>{dataRehearsal.Capsula4}</td>
+                      <td className="tg-tabela-de-capsula-0r18 cell-50px">{dataRehearsal.Capsula1}</td>
+                      <td className="tg-tabela-de-capsula-0r18 cell-50px">{dataRehearsal.Capsula2}</td>
+                      <td className="tg-tabela-de-capsula-0r18 cell-50px">{dataRehearsal.Capsula3}</td>
+                      <td className="tg-tabela-de-capsula-0r18 cell-50px">{dataRehearsal.Capsula4}</td>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td className="tg-tabela-de-capsula-0r18" style={{ textAlign: 'left' }}>Massa de amostra úmida + cápsula</td>
+                      <td className="tg-tabela-de-capsula-0r18 cell-left">Massa de amostra úmida + cápsula</td>
                       <td className="tg-tabela-de-capsula-0r18">g</td>
                       <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaUmida1}</td>
                       <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaUmida2}</td>
@@ -116,7 +96,7 @@ const WaterContentModel: React.FC<WaterContentModelProps> = ({
                       <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaUmida4}</td>
                     </tr>
                     <tr>
-                      <td className="tg-tabela-de-capsula-0r18" style={{ textAlign: 'left' }}>Massa da amostra seca + cápsula</td>
+                      <td className="tg-tabela-de-capsula-0r18 cell-left">Massa da amostra seca + cápsula</td>
                       <td className="tg-tabela-de-capsula-0r18">g</td>
                       <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaSeca1}</td>
                       <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaSeca2}</td>
@@ -124,7 +104,7 @@ const WaterContentModel: React.FC<WaterContentModelProps> = ({
                       <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaSeca4}</td>
                     </tr>
                     <tr>
-                      <td className="tg-tabela-de-capsula-0r18" style={{ textAlign: 'left' }}>Massa da cápsula</td>
+                      <td className="tg-tabela-de-capsula-0r18 cell-left">Massa da cápsula</td>
                       <td className="tg-tabela-de-capsula-0r18">g</td>
                       <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaCapsula1}</td>
                       <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaCapsula2}</td>
@@ -132,7 +112,7 @@ const WaterContentModel: React.FC<WaterContentModelProps> = ({
                       <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaCapsula4}</td>
                     </tr>
                     <tr>
-                      <td className="tg-tabela-de-capsula-0r18" style={{ textAlign: 'left' }}>Massa da água</td>
+                      <td className="tg-tabela-de-capsula-0r18 cell-left">Massa da água</td>
                       <td className="tg-tabela-de-capsula-0r18">g</td>
                       <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaAgua1}</td>
                       <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaAgua2}</td>
@@ -140,7 +120,7 @@ const WaterContentModel: React.FC<WaterContentModelProps> = ({
                       <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaAgua4}</td>
                     </tr>
                     <tr>
-                      <td className="tg-tabela-de-capsula-0r18" style={{ textAlign: 'left' }}>Massa do solo seco</td>
+                      <td className="tg-tabela-de-capsula-0r18 cell-left">Massa do solo seco</td>
                       <td className="tg-tabela-de-capsula-0r18">g</td>
                       <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaSoloSeco1}</td>
                       <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaSoloSeco2}</td>
@@ -148,7 +128,7 @@ const WaterContentModel: React.FC<WaterContentModelProps> = ({
                       <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.MassaSoloSeco4}</td>
                     </tr>
                     <tr>
-                      <td className="tg-tabela-de-capsula-0r18" style={{ textAlign: 'left' }}>Teor de umidade</td>
+                      <td className="tg-tabela-de-capsula-0r18 cell-left">Teor de umidade</td>
                       <td className="tg-tabela-de-capsula-0r18">%</td>
                       <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.TeorAgua1}</td>
                       <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.TeorAgua2}</td>
@@ -156,11 +136,10 @@ const WaterContentModel: React.FC<WaterContentModelProps> = ({
                       <td className="tg-tabela-de-capsula-0r18">{dataRehearsal.TeorAgua4}</td>
                     </tr>
                     <tr>
-                      <td className="tg-tabela-de-capsula-0r18" style={{ textAlign: 'left' }}>Teor de umidade médio</td>
+                      <td className="tg-tabela-de-capsula-0r18 cell-left">Teor de umidade médio</td>
                       <td className="tg-tabela-de-capsula-0r18">%</td>
                       <td 
-                        className="tg-tabela-de-capsula-0r18" 
-                        style={{ backgroundColor: '#c8c8c8', fontWeight: 'bold' }}
+                        className="tg-tabela-de-capsula-0r18 cell-highlighted" 
                         colSpan={4}
                       >
                         {dataRehearsal.Media}
@@ -170,28 +149,22 @@ const WaterContentModel: React.FC<WaterContentModelProps> = ({
                 </table>
 
                 {/* Título da tabela de incertezas */}
-                <div style={{ 
-                  marginTop: '15px', 
-                  textAlign: 'left', 
-                  fontSize: '12px', 
-                  fontFamily: 'Arial, sans-serif',
-                  fontWeight: 'bold'
-                }}>
+                <div className="incerteza-title">
                   Tabela de Incertezas do resultado do ensaio
                 </div>
 
                 {/* Tabela de incertezas */}
                 <table className="tg-tabela-de-capsula-2">
                   <tbody>
-                    <tr style={{ marginTop: '5px', height: '4px' }}>
-                      <td className="tg-tabela-de-capsula-0r18" style={{ textAlign: 'left', width: '442.2px' }}>
+                    <tr className="table-row-spaced-4">
+                      <td className="tg-tabela-de-capsula-0r18 cell-wide">
                         Incerteza Expandida
                       </td>
                       <td className="tg-tabela-de-capsula-0r10">%</td>
                       <td className="tg-tabela-de-capsula-0r18" colSpan={4}>{dataRehearsal.Incerteza}</td>
                     </tr>
-                    <tr style={{ marginTop: '5px', height: '5px' }}>
-                      <td className="tg-tabela-de-capsula-0r18" style={{ textAlign: 'left' }}>
+                    <tr className="table-row-spaced">
+                      <td className="tg-tabela-de-capsula-0r18 cell-left">
                         Fator de Expansão
                       </td>
                       <td className="tg-tabela-de-capsula-0r10">k</td>
