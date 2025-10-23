@@ -20,6 +20,14 @@ const HeaderTable: React.FC<HeaderTableProps> = ({
   codSample = "",
   numberSample = ""
 }) => {
+  // Debug temporário
+  console.log('HeaderTable renderizado:', {
+    relatorioTitulo,
+    relatorioSubtitulo,
+    codSample,
+    numberSample
+  });
+
   // Logo do cliente (simula a lógica PHP)
   const logoElement = logo ? (
     <img

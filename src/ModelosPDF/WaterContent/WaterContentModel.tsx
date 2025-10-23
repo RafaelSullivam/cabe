@@ -14,9 +14,19 @@ const WaterContentModel: React.FC<WaterContentModelProps> = ({
   logo,
   signatures
 }) => {
+  // Debug temporário
+  console.log('WaterContentModel renderizado:', {
+    codSample,
+    numberSample,
+    pagina,
+    totalPaginas
+  });
 
   return (
-    <div className="water-content-model">
+    <div className="water-content-model" >
+      {/* DEBUG: Borda vermelha para identificar componente */}
+      
+      
       {/* Cabeçalho usando componente HeaderTable */}
       <HeaderTable
         logo={logo}
